@@ -3,986 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Steven Vũ &amp; Anh Thư — October 10, 2026</title>
+  <title>Steven Vu & Anh Thu — October 10, 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    
-    /* FLOWER-INSPIRED COLOR PALETTE */
-    :root{
-      /* Soft flower petals - warm peachy pinks */
-      --petal-light:#fef5f0;
-      --petal-mid:#f5e6e1;
-      --petal-warm:#f0d9d4;
-      
-      /* Deep garden colors - rich jewel tones */
-      --garden-dark:#2d1f1f;
-      --garden-mid:#4a2c2a;
-      --garden-light:#6b4e4d;
-      
-      /* Flower accent colors */
-      --rose-deep:#c4576b;
-      --rose-medium:#d97b8b;
-      --rose-soft:#e8a8b8;
-      --blush:#f4d0d8;
-      
-      --sage-dark:#7a9999;
-      --sage-mid:#9fb5b5;
-      --sage-light:#c4dada;
-      
-      --gold-accent:#d4a574;
-      --gold-light:#e8c9a3;
-      
-      /* Neutral supports */
-      --white:#ffffff;
-      --text-dark:#2d1f1f;
-      
-      /* Fonts */
-      --serif:'Playfair Display',Georgia,serif;
-      --sans:'Montserrat',sans-serif;
-    }
-    
-    html{scroll-behavior:smooth}
-    body{
-      background:linear-gradient(135deg, var(--petal-light) 0%, #faf8f6 50%, #f8f5f3 100%);
-      color:var(--text-dark);
-      font-family:var(--sans);
-      font-weight:300;
-      overflow-x:hidden;
-      min-height:100vh;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@300;400;500&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    /* ========== NAVIGATION ========== */
-    nav{
-      position:fixed;
-      top:0;
-      left:0;
-      right:0;
-      z-index:100;
-      display:flex;
-      justify-content:center;
-      gap:3.2rem;
-      padding:1.3rem 2rem;
-      background:rgba(255,255,255,0.75);
-      backdrop-filter:blur(20px);
-      border-bottom:1px solid rgba(212,165,116,0.2);
-      font-size:0.95rem;
-      letter-spacing:0.25em;
-      text-transform:uppercase;
-      box-shadow:0 2px 20px rgba(45,31,31,0.05);
-    }
-    nav a{
-      text-decoration:none;
-      color:var(--garden-mid);
-      transition:all 0.3s ease;
-      font-weight:400;
-      position:relative;
-    }
-    nav a::after{
-      content:'';
-      position:absolute;
-      bottom:-4px;
-      left:0;
-      width:0;
-      height:2px;
-      background:linear-gradient(90deg, var(--rose-deep), var(--gold-accent));
-      transition:width 0.3s ease;
-    }
-    nav a:hover{
-      color:var(--rose-deep);
-    }
-    nav a:hover::after{
-      width:100%;
-    }
-
-    /* ========== HERO SECTION ========== */
-    #hero{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:8rem 2rem 6rem;
-      position:relative;
-      overflow:hidden;
-      background:linear-gradient(180deg, 
-        rgba(254,245,240,0.8) 0%,
-        rgba(255,255,255,0.95) 60%,
-        rgba(245,230,225,0.6) 100%);
-    }
-    
-    #hero::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(ellipse 80% 60% at 15% 25%, rgba(196,87,107,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 70% 55% at 85% 75%, rgba(159,181,181,0.1) 0%, transparent 65%),
-        radial-gradient(ellipse 60% 70% at 50% 50%, rgba(212,165,116,0.08) 0%, transparent 70%);
-      pointer-events:none;
-    }
-    
-    #hero::after{
-      content:'';
-      position:absolute;
-      width:680px;
-      height:680px;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-      border-radius:50%;
-      border:2px solid rgba(196,87,107,0.08);
-      pointer-events:none;
-    }
-    
-    .hero-eyebrow{
-      font-size:1.1rem;
-      letter-spacing:0.35em;
-      text-transform:uppercase;
-      color:var(--rose-medium);
-      margin-bottom:2rem;
-      animation:fadeUp 1s ease both;
-      font-weight:500;
-      word-spacing:0.2em;
-    }
-    
-    .hero-names{
-      font-family:var(--serif);
-      font-size:clamp(3.5rem, 12vw, 9rem);
-      font-weight:300;
-      line-height:0.95;
-      color:var(--garden-dark);
-      animation:fadeUp 1s 0.15s ease both;
-      letter-spacing:-0.02em;
-    }
-    
-    .hero-names .amp{
-      display:block;
-      font-style:italic;
-      font-size:0.75em;
-      color:var(--rose-deep);
-      line-height:1.5;
-      letter-spacing:0.1em;
-      font-weight:300;
-    }
-    
-    .hero-rule{
-      display:flex;
-      align-items:center;
-      gap:1.5rem;
-      margin:2.5rem auto;
-      width:280px;
-      animation:fadeUp 1s 0.3s ease both;
-    }
-    
-    .hero-rule span{
-      flex:1;
-      height:1px;
-      background:linear-gradient(to right, transparent, var(--gold-accent), transparent);
-    }
-    
-    .hero-rule .dot{
-      width:8px;
-      height:8px;
-      border-radius:50%;
-      background:linear-gradient(135deg, var(--rose-deep), var(--rose-medium));
-      flex-shrink:0;
-      box-shadow:0 4px 12px rgba(196,87,107,0.2);
-    }
-    
-    .hero-date{
-      font-family:var(--serif);
-      font-size:2rem;
-      font-weight:300;
-      letter-spacing:0.12em;
-      color:var(--garden-mid);
-      animation:fadeUp 1s 0.4s ease both;
-      margin-bottom:0.3rem;
-    }
-    
-    .hero-venue{
-      font-size:1.1rem;
-      letter-spacing:0.18em;
-      text-transform:uppercase;
-      color:var(--sage-dark);
-      animation:fadeUp 1s 0.5s ease both;
-      font-weight:400;
-    }
-    
-    .hero-cta{
-      margin-top:3.5rem;
-      animation:fadeUp 1s 0.65s ease both;
-    }
-    
-    .btn{
-      display:inline-block;
-      padding:1.1rem 3.2rem;
-      border:2px solid var(--rose-deep);
-      color:var(--rose-deep);
-      text-decoration:none;
-      font-family:var(--sans);
-      font-size:0.9rem;
-      letter-spacing:0.22em;
-      text-transform:uppercase;
-      transition:all 0.4s ease;
-      background:transparent;
-      cursor:pointer;
-      font-weight:500;
-      position:relative;
-      overflow:hidden;
-    }
-    
-    .btn::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(135deg, var(--rose-deep), var(--rose-medium));
-      transform:scaleX(0);
-      transform-origin:left;
-      transition:transform 0.4s ease;
-      z-index:-1;
-    }
-    
-    .btn:hover{
-      color:white;
-      border-color:var(--rose-deep);
-      box-shadow:0 8px 24px rgba(196,87,107,0.25);
-    }
-    
-    .btn:hover::before{
-      transform:scaleX(1);
-    }
-    
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(20px)}
-      to{opacity:1;transform:translateY(0)}
-    }
-
-    /* ========== SECTIONS ========== */
-    section{padding:7rem 2rem}
-    
-    .section-inner{max-width:1100px;margin:0 auto}
-    
-    .section-label{
-      font-size:1.1rem;
-      letter-spacing:0.3em;
-      text-transform:uppercase;
-      color:var(--rose-medium);
-      margin-bottom:1rem;
-      font-weight:500;
-    }
-    
-    .section-title{
-      font-family:var(--serif);
-      font-size:clamp(2.2rem, 5vw, 3.8rem);
-      font-weight:300;
-      line-height:1.15;
-      margin-bottom:1.8rem;
-      color:var(--garden-dark);
-      letter-spacing:-0.01em;
-    }
-    
-    .section-title em{
-      font-style:italic;
-      color:var(--rose-deep);
-      font-weight:300;
-    }
-    
-    .section-body{
-      font-size:1.15rem;
-      line-height:1.9;
-      color:var(--garden-light);
-      font-weight:300;
-    }
-
-    /* ========== GALLERY/CAROUSEL ========== */
-    #gallery{
-      display:flex;
-      background:linear-gradient(135deg, rgba(254,245,240,0.5) 0%, rgba(232,168,184,0.08) 100%);
-      padding:6rem 2rem;
-      justify-content:center;
-      align-items:center;
-    }
-    
-    .carousel{
-      position:relative;
-      width:66%;
-      min-width:640px;
-      aspect-ratio:3/2;
-      margin:0 auto;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-      border-radius:12px;
-      box-shadow:0 20px 60px rgba(45,31,31,0.15);
-    }
-    
-    .carousel-track{
-      position:static;
-      width:100%;
-      height:100%;
-    }
-    
-    .carousel-slide{
-      position:absolute;
-      inset:0;
-      opacity:0;
-      transition:opacity 0.8s ease-in-out;
-      z-index:0;
-      pointer-events:none;
-    }
-    
-    .carousel-track,
-    .carousel-slide{
-      width:100%;
-      height:100%;
-    }
-    
-    .carousel-slide.active{
-      opacity:1;
-      z-index:1;
-      pointer-events:auto;
-    }
-    
-    .carousel-slide img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center;
-      will-change:transform;
-      backface-visibility:hidden;
-      -webkit-backface-visibility:hidden;
-      animation:continuousZoom 180s ease-in-out infinite;
-    }
-    
-    @keyframes continuousZoom{
-      0%{transform:scale(1.00)}
-      13%{transform:scale(1.12)}
-      25%{transform:scale(1.00)}
-      38%{transform:scale(1.12)}
-      50%{transform:scale(1.00)}
-      63%{transform:scale(1.12)}
-      75%{transform:scale(1.00)}
-      88%{transform:scale(1.12)}
-      100%{transform:scale(1.00)}
-    }
-    
-    .carousel-slide::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(
-        to bottom,
-        rgba(45,31,31,0) 40%,
-        rgba(45,31,31,0.2) 100%
-      );
-      z-index:2;
-      pointer-events:none;
-    }
-    
-    .carousel-slide.portrait img{
-      object-fit:cover;
-      background:#ffffff;
-    }
-    
-    .carousel-dots{
-      position:absolute;
-      bottom:1.5rem;
-      left:50%;
-      transform:translateX(-50%);
-      display:flex;
-      gap:0.7rem;
-      z-index:10;
-    }
-    
-    .carousel-dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:rgba(255,255,255,0.4);
-      border:none;
-      cursor:pointer;
-      transition:all 0.3s ease;
-      backdrop-filter:blur(4px);
-    }
-    
-    .carousel-dot:hover{
-      background:rgba(255,255,255,0.7);
-      transform:scale(1.15);
-    }
-    
-    .carousel-dot.active{
-      background:#ffffff;
-      transform:scale(1.4);
-      box-shadow:0 4px 12px rgba(45,31,31,0.2);
-    }
-
-    /* ========== STORY/QUOTES ========== */
-    #story{
-      background:linear-gradient(180deg, 
-        rgba(254,245,240,0.6) 0%,
-        rgba(255,255,255,0.95) 100%);
-    }
-    
-    .story-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:3.5rem;
-      align-items:stretch;
-      margin-top:3rem;
-    }
-    
-    .quote-card{
-      padding:2.5rem;
-      border-left:5px solid var(--gold-accent);
-      position:relative;
-      background:rgba(255,255,255,0.7);
-      border-radius:4px;
-      backdrop-filter:blur(10px);
-      transition:all 0.4s ease;
-      box-shadow:0 8px 32px rgba(212,165,116,0.08);
-      display:flex;
-      flex-direction:column;
-    }
-    
-    .quote-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 12px 48px rgba(212,165,116,0.15);
-      border-left-color:var(--rose-deep);
-    }
-    
-    .quote-card.pink-top{
-      border-left-color:var(--rose-deep);
-    }
-    
-    .quote-mark{
-      font-family:var(--serif);
-      font-size:3.5rem;
-      color:var(--gold-accent);
-      line-height:0.4;
-      margin-bottom:1rem;
-      display:block;
-      opacity:0.6;
-    }
-    
-    .quote-card.pink-top .quote-mark{
-      color:var(--rose-medium);
-    }
-    
-    .quote-text{
-      font-family:var(--serif);
-      font-size:1.15rem;
-      font-style:italic;
-      line-height:1.85;
-      color:var(--garden-mid);
-      margin-bottom:1.2rem;
-      font-weight:300;
-    }
-    
-    .quote-author{
-      font-size:1.05rem;
-      letter-spacing:0.25em;
-      text-transform:uppercase;
-      color:var(--rose-deep);
-      font-weight:500;
-      margin-top:auto;
-      padding-top:1.5rem;
-      border-top:1px solid rgba(196,87,107,0.1);
-    }
-
-    /* ========== FAMILY SECTION ========== */
-    #family{
-      background:linear-gradient(135deg, 
-        rgba(196,217,217,0.15) 0%,
-        rgba(245,230,225,0.6) 100%);
-    }
-    
-    .family-container{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:4rem;
-      margin-top:3rem;
-      padding:3rem 0;
-    }
-    
-    .family-side{
-      text-align:center;
-    }
-    
-    .family-side h3{
-      font-family:var(--serif);
-      font-size:1.5rem;
-      font-weight:300;
-      color:var(--rose-deep);
-      margin-bottom:1.8rem;
-      letter-spacing:0.05em;
-    }
-    
-    .family-members{
-      display:flex;
-      flex-direction:column;
-      gap:1.8rem;
-    }
-    
-    .family-member{
-      padding:1.2rem;
-      background:rgba(255,255,255,0.6);
-      border-radius:4px;
-      backdrop-filter:blur(8px);
-      transition:all 0.3s ease;
-      border:1px solid rgba(196,87,107,0.1);
-    }
-    
-    .family-member:hover{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,0.9);
-      box-shadow:0 8px 24px rgba(196,87,107,0.1);
-    }
-    
-    .family-role{
-      font-size:0.85rem;
-      letter-spacing:0.2em;
-      text-transform:uppercase;
-      color:var(--sage-dark);
-      margin-bottom:0.4rem;
-      font-weight:500;
-    }
-    
-    .family-names{
-      font-family:var(--serif);
-      font-size:1.2rem;
-      color:var(--garden-dark);
-      font-weight:300;
-      line-height:1.6;
-    }
-    
-    .family-divider{
-      text-align:center;
-      margin:2rem 0;
-    }
-    
-    .family-divider::before{
-      content:'';
-      display:inline-block;
-      width:40px;
-      height:2px;
-      background:linear-gradient(90deg, var(--rose-deep), var(--gold-accent));
-      vertical-align:middle;
-      margin:0 1rem;
-    }
-    
-    .family-divider::after{
-      content:'';
-      display:inline-block;
-      width:40px;
-      height:2px;
-      background:linear-gradient(90deg, var(--gold-accent), var(--rose-deep));
-      vertical-align:middle;
-      margin:0 1rem;
-    }
-    
-    .family-couple{
-      margin-top:2rem;
-      padding-top:2rem;
-      border-top:2px solid rgba(196,87,107,0.2);
-    }
-    
-    .family-couple h4{
-      font-family:var(--serif);
-      font-size:1.3rem;
-      color:var(--garden-dark);
-      margin-bottom:0.8rem;
-      font-weight:300;
-    }
-    
-    .couple-names{
-      font-family:var(--serif);
-      font-size:1.4rem;
-      color:var(--rose-deep);
-      font-weight:300;
-      letter-spacing:0.05em;
-    }
-    
-    .couple-names em{
-      font-style:italic;
-      color:var(--rose-medium);
-    }
-
-    /* ========== SCHEDULE ========== */
-    #schedule{
-      background:linear-gradient(135deg, 
-        rgba(254,245,240,0.8) 0%,
-        rgba(196,217,217,0.1) 100%);
-    }
-    
-    .schedule-list{
-      margin-top:3.5rem;
-      display:flex;
-      flex-direction:column;
-    }
-    
-    .schedule-item{
-      display:flex;
-      flex-direction:column;
-      gap:1.5rem;
-      padding:3rem 0;
-      border-bottom:1px solid rgba(196,87,107,0.15);
-      align-items:center;
-      text-align:center;
-      transition:all 0.3s ease;
-    }
-    
-    .schedule-item:first-child{
-      border-top:1px solid rgba(196,87,107,0.15);
-    }
-    
-    .schedule-item:hover{
-      padding:3rem 2rem;
-      background:rgba(255,255,255,0.4);
-      border-radius:8px;
-      margin:0 -2rem;
-    }
-    
-    .sched-time{
-      font-family:var(--serif);
-      font-size:2rem;
-      font-weight:300;
-      color:var(--rose-deep);
-      letter-spacing:0.05em;
-    }
-    
-    .sched-content h3{
-      font-family:var(--serif);
-      font-size:1.6rem;
-      font-weight:300;
-      margin-bottom:0.5rem;
-      color:var(--garden-dark);
-    }
-    
-    .sched-content p{
-      font-size:1.1rem;
-      line-height:1.8;
-      color:var(--garden-light);
-    }
-    
-    .sched-tag{
-      display:inline-block;
-      margin-top:1rem;
-      font-size:0.85rem;
-      letter-spacing:0.2em;
-      text-transform:uppercase;
-      background:linear-gradient(135deg, var(--rose-soft), var(--blush));
-      color:var(--rose-deep);
-      padding:0.4rem 1rem;
-      border-radius:20px;
-      font-weight:500;
-    }
-    
-    .sched-address{
-      display:block;
-      margin-top:0.8rem;
-      font-size:1rem;
-      color:var(--sage-mid);
-      font-style:italic;
-      line-height:1.7;
-      font-weight:300;
-    }
-    
-    #schedule .section-inner{
-      text-align:center;
-    }
-
-    /* ========== DRESS CODE ========== */
-    #dresscode{
-      background:linear-gradient(135deg,
-        rgba(245,230,225,0.8) 0%,
-        rgba(232,168,184,0.15) 50%,
-        rgba(196,217,217,0.12) 100%);
-      text-align:center;
-    }
-    
-    #dresscode .section-inner{
-      max-width:600px;
-    }
-    
-    .dress-chips{
-      display:flex;
-      gap:1.2rem;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:2.5rem;
-    }
-    
-    .dress-chip{
-      padding:0.7rem 1.8rem;
-      border:2px solid var(--gold-accent);
-      font-size:0.9rem;
-      letter-spacing:0.18em;
-      text-transform:uppercase;
-      color:var(--garden-mid);
-      background:rgba(255,255,255,0.8);
-      border-radius:30px;
-      transition:all 0.3s ease;
-      cursor:pointer;
-      font-weight:400;
-    }
-    
-    .dress-chip:hover{
-      background:linear-gradient(135deg, var(--rose-medium), var(--gold-light));
-      color:white;
-      border-color:var(--rose-deep);
-      transform:translateY(-2px);
-    }
-
-    /* ========== RSVP ========== */
-    #rsvp{
-      background:linear-gradient(180deg,
-        rgba(255,255,255,0.95) 0%,
-        rgba(254,245,240,0.7) 100%);
-      text-align:center;
-    }
-    
-    #rsvp .section-inner{
-      max-width:580px;
-    }
-    
-    #rsvp .section-body{
-      margin:0 auto 3rem;
-    }
-    
-    .rsvp-form{
-      display:flex;
-      flex-direction:column;
-      gap:1.3rem;
-      text-align:left;
-    }
-    
-    .form-row{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:1.3rem;
-    }
-    
-    .form-group{
-      display:flex;
-      flex-direction:column;
-      gap:0.5rem;
-    }
-    
-    .form-group label{
-      font-size:0.95rem;
-      letter-spacing:0.2em;
-      text-transform:uppercase;
-      color:var(--rose-medium);
-      font-weight:500;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea{
-      background:rgba(255,255,255,0.6);
-      border:1px solid rgba(196,87,107,0.2);
-      padding:1rem;
-      font-family:var(--sans);
-      font-size:0.95rem;
-      color:var(--text-dark);
-      outline:none;
-      transition:all 0.3s ease;
-      width:100%;
-      -webkit-appearance:none;
-      border-radius:4px;
-      font-weight:300;
-    }
-    
-    .form-group input::placeholder,
-    .form-group textarea::placeholder{
-      color:rgba(45,31,31,0.4);
-    }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus{
-      border-color:var(--rose-deep);
-      background:rgba(255,255,255,0.95);
-      box-shadow:0 4px 16px rgba(196,87,107,0.12);
-    }
-    
-    .form-group textarea{
-      resize:vertical;
-      min-height:100px;
-    }
-    
-    .btn-submit{
-      background:linear-gradient(135deg, var(--rose-deep), var(--rose-medium));
-      color:white;
-      border:none;
-      padding:1.15rem 3.5rem;
-      font-family:var(--sans);
-      font-size:0.95rem;
-      letter-spacing:0.22em;
-      text-transform:uppercase;
-      cursor:pointer;
-      transition:all 0.4s ease;
-      align-self:center;
-      border-radius:4px;
-      font-weight:500;
-      box-shadow:0 8px 24px rgba(196,87,107,0.2);
-    }
-    
-    .btn-submit:hover{
-      transform:translateY(-2px);
-      box-shadow:0 12px 32px rgba(196,87,107,0.3);
-    }
-    
-    .btn-submit:active{
-      transform:translateY(0);
-    }
-
-    /* ========== FOOTER ========== */
-    footer{
-      background:linear-gradient(180deg, var(--garden-dark) 0%, #1a1515 100%);
-      color:rgba(255,255,255,0.5);
-      text-align:center;
-      padding:4rem 2rem;
-      font-size:0.9rem;
-      letter-spacing:0.12em;
-    }
-    
-    .footer-names{
-      font-family:var(--serif);
-      font-size:2.5rem;
-      font-weight:300;
-      color:rgba(255,255,255,0.9);
-      margin-bottom:0.8rem;
-      letter-spacing:-0.01em;
-    }
-    
-    .footer-names em{
-      font-style:italic;
-      color:var(--rose-medium);
-    }
-    
-    .footer-rule{
-      width:80px;
-      height:2px;
-      background:linear-gradient(90deg, var(--gold-accent), var(--rose-medium));
-      margin:1.5rem auto;
-    }
-
-    /* ========== MUSIC BUTTON WITH MUSIC NOTE ICON ========== */
-    .music-btn{
-      position:fixed;
-      bottom:2rem;
-      right:2rem;
-      width:70px;
-      height:70px;
-      border:none;
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(135deg, 
-        rgba(196,87,107,0.85) 0%, 
-        rgba(159,181,181,0.75) 100%);
-      box-shadow:
-        0 12px 40px rgba(196,87,107,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.3);
-      transition:all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border-radius:50%;
-      backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,0.2);
-      z-index:50;
-    }
-
-    .music-btn svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 30px;
-      height: 30px;
-      transition: all 0.3s ease;
-    }
-
-    .music-btn:hover{
-      transform:scale(1.12) rotate(-5deg);
-      box-shadow:
-        0 18px 50px rgba(196,87,107,0.35),
-        inset 0 1px 0 rgba(255,255,255,0.4);
-      background:linear-gradient(135deg, 
-        rgba(196,87,107,0.95) 0%, 
-        rgba(159,181,181,0.85) 100%);
-    }
-
-    .music-btn.playing{
-      animation:musicPulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-
-    .music-btn.playing .icon-pause {
-      display: block !important;
-      animation: musicRotate 3s linear infinite;
-      transform-origin: center center;
-    }
-
-    .music-btn.playing .icon-music {
-      display: none !important;
-    }
-
-    @keyframes musicPulse{
-      0%, 100%{
-        box-shadow:
-          0 12px 40px rgba(196,87,107,0.25),
-          inset 0 1px 0 rgba(255,255,255,0.3),
-          0 0 0 0 rgba(196,87,107,0.15);
-      }
-      50%{
-        box-shadow:
-          0 12px 40px rgba(196,87,107,0.35),
-          inset 0 1px 0 rgba(255,255,255,0.3),
-          0 0 0 12px rgba(196,87,107,0);
-      }
-    }
-
-    @keyframes musicRotate{
-      from {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      to {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-
-    /* ========== RESPONSIVE ========== */
-    @media(max-width:768px){
-      nav{gap:1.8rem;font-size:0.85rem;padding:1rem 1.5rem}
-      .story-grid{grid-template-columns:1fr}
-      .form-row{grid-template-columns:1fr}
-      .carousel{width:90%;min-width:300px;height:280px}
-      section{padding:5rem 1.5rem}
-      .hero-names{font-size:clamp(2.5rem, 10vw, 5rem)}
-      .music-btn{width:60px;height:60px;bottom:1.5rem;right:1.5rem}
-      .family-container{grid-template-columns:1fr;gap:2rem}
-      .quote-card:first-child{margin-top:0}
-    }
-
-    @media(max-width:480px){
-      nav{flex-direction:column;gap:1rem;padding:0.8rem}
-      .hero-eyebrow{font-size:0.9rem}
-      .hero-date{font-size:1.4rem}
-      .hero-venue{font-size:0.9rem}
-      .btn{padding:0.9rem 2rem;font-size:0.8rem}
-      .carousel{width:95%;height:240px}
-      .dress-chips{gap:0.8rem}
-      .music-btn{width:55px;height:55px;bottom:1.2rem;right:1.2rem}
-      .quote-card{padding:1.5rem}
-    }
-  </style>
 </head>
 
 <body>
+
+<!-- SAKURA PETALS FALLING ANIMATION -->
+<div class="sakura-container" id="sakuraContainer"></div>
 
 <nav>
   <a href="#story">Our Story</a>
@@ -994,17 +26,23 @@
 <section id="hero">
   <p class="hero-eyebrow">Together at last</p>
   <h1 class="hero-names">
-    Steven Vũ
+    Steven Vu
     <span class="amp">&amp;</span>
-    Anh Thư
+    Anh Thu
   </h1>
   <div class="hero-rule">
     <span></span><div class="dot"></div><span></span>
   </div>
   <p class="hero-date">October 10, 2026</p>
-  <p class="hero-venue">Hoa Vien Kim Bich · Đồng Nai, Vietnam</p>
+  <p class="hero-venue">Hoa Vien Kim Bich · Dong Nai, Vietnam</p>
   <div class="hero-cta"><a href="#rsvp" class="btn">Kindly Reply</a></div>
 </section>
+
+<!-- SECTION DIVIDER -->
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-flower"></div>
+</div>
 
 <section id="gallery">
   <div class="carousel" aria-label="Photo carousel">
@@ -1034,12 +72,20 @@
       <div class="carousel-slide">
         <img src="images/image7.jpg" alt="Photo 8" data-focus="center">
       </div>
-
+      <div class="carousel-slide">
+        <img src="images/image8.jpg" alt="Photo 9" data-focus="center">
+      </div>
     </div>
 
     <div class="carousel-dots" id="carouselDots"></div>
   </div>
 </section>
+
+<!-- SECTION DIVIDER -->
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-flower"></div>
+</div>
 
 <section id="story">
   <div class="section-inner">
@@ -1048,25 +94,27 @@
     <div class="story-grid">
       <div class="quote-card">
         <span class="quote-mark">"</span>
-        <p class="quote-text">I knew Thư was the one for me when I realized I wasn't pretending to be someone else or only revealing fragments of who I am. I found someone I could be completely genuine with, in every thought, in every feeling, and in every small action - even in moments of doubt or imperfection. Being with her, I felt like all the scattered parts of my heart and my life came together, like finding the one piece that completes a puzzle I didn't even know was incomplete. I realized that being loved by her wasn't enough; I wanted to give her all of me, to protect her, support her, and share everything that I am.</p>
+        <p class="quote-text">I knew Thu was the one for me when I realized I wasn't pretending to be someone else or only revealing fragments of who I am. I found someone I could be completely genuine with, in every thought, in every feeling, and in every small action - even in moments of doubt or imperfection. Being with her, I felt like all the scattered parts of my heart and my life came together, like finding the one piece that completes a puzzle I didn't even know was incomplete. I realized that being loved by her wasn't enough; I wanted to give her all of me, to protect her, support her, and share everything that I am.</p>
         <p class="quote-text">That was when I knew, she was my other half.</p> 
-        <p class="quote-text">Mình biết Thư là người dành cho mình khi mình nhận ra rằng mình không còn phải cố gắng trở thành một ai khác, hay chỉ dám bộc lộ một phần con người mình. Mình đã tìm được một người mà mình có thể hoàn toàn sống thật, cả trong suy nghĩ lẫn cách mình hành động. Mình có thể là chính mình, đôi khi kỳ quặc, đầu tóc bù xù, không chỉnh chu, nhưng Thư vẫn luôn ở đó, quan tâm và yêu thương mình nhiều hơn vì chính con người của mình. Khi ở bên Thư, mình cảm thấy như tất cả những mảnh ghép rời rạc trong trái tim mình cuối cùng cũng được kết nối lại, giống như tìm thấy mảnh ghép hoàn chỉnh cho một bức tranh mà trước đó mình thậm chí còn không biết là nó đang thiếu. Mình nhận ra rằng chỉ được Thư yêu thôi là chưa đủ; mình muốn ở bên Thư, cùng Thư đi qua mọi điều và trở thành chỗ dựa cho nhau.</p>
-        <p class="quote-text">Đó là khi mình biết rằng, em chính là một nửa còn lại của mình.</p> 
         <span class="quote-mark">"</span>
-        <p class="quote-author">Steven Vũ</p>
+        <p class="quote-author">Steven Vu</p>
       </div>
       <div class="quote-card pink-top">
         <span class="quote-mark">"</span>
         <p class="quote-text">For me, I knew Steven was the one I wanted to spend my life with when he chose to be honest with me, even when it meant facing the fear of possibly losing me. The moment he opened up and showed me who he truly was, without hiding or holding back, was when I realized how serious he was about this love. With him, I always feel safe, valued, and free to be myself, even in my imperfect moments. And I realized that I don't just want to be loved by him, I want to love him and take care of him for the rest of my life. In every little moment we share, I find more reasons to believe that this is the kind of love I have always been hoping for.</p>
         <p class="quote-text">That was when I knew, he was my other half.</p> 
-        <p class="quote-text">Với mình, mình biết anh Steven là người mà mình muốn dành cả cuộc đời bên cạnh khi anh chọn thành thật với mình, ngay cả khi điều đó đồng nghĩa với việc phải đối diện với nỗi sợ có thể mất mình. Khoảnh khắc anh mở lòng và cho mình thấy con người thật của anh, không giấu giếm hay giữ lại điều gì, cũng là lúc mình nhận ra anh nghiêm túc với tình yêu này đến thế nào. Ở bên anh, mình luôn cảm thấy an toàn, được trân trọng, và được là chính mình, kể cả trong những lúc chưa hoàn hảo. Và mình nhận ra rằng mình không chỉ muốn được anh yêu, mà còn muốn yêu anh và chăm sóc anh suốt phần đời còn lại. Trong từng khoảnh khắc nhỏ bé chúng mình bên nhau, mình lại có thêm nhiều lý do để tin rằng đây chính là tình yêu mà mình luôn mong đợi.</p>
-        <p class="quote-text">Đó là khi mình biết rằng, anh chính là một nửa còn lại của mình.</p> 
         <span class="quote-mark">"</span>
-        <p class="quote-author">Anh Thư</p>
+        <p class="quote-author">Anh Thu</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- SECTION DIVIDER -->
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-flower"></div>
+</div>
 
 <section id="family">
   <div class="section-inner">
@@ -1076,28 +124,32 @@
     <div class="family-container">
       <!-- GROOM'S FAMILY -->
       <div class="family-side">
-        <h3>Nhà Trai | The Groom's Family</h3>
+        <h3>The Groom's Family</h3>
         <div class="family-couple">
-          <h4>Parents | Cha Mẹ</h4>
           <div class="couple-names">
-            Ông GIUSE VŨ HOÀNG MINH<br><em>&</em><br>Bà ROSA LÊ THỊ KIM LIÊN
+            Mr. Vu Hoang Minh<br><em>&</em>Mrs. Le Thi Kim Lien
           </div>
         </div>
       </div>
       
       <!-- BRIDE'S FAMILY -->
       <div class="family-side">
-        <h3>Nhà Gái | The Bride's Family</h3>
+        <h3>The Bride's Family</h3>
         <div class="family-couple">
-          <h4>Parents | Cha Mẹ</h4>
           <div class="couple-names">
-            Ông LAURENSO NGUYỄN TRÍ DŨNG <br><em>&</em><br>Bà ROSA MARIA TRẦN THỊ NGỌC LINH
+            Mr. Nguyen Tri Dung <br><em>&</em>Mrs. Tran Thi Ngoc Linh
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- SECTION DIVIDER -->
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-flower"></div>
+</div>
 
 <section id="schedule">
   <div class="section-inner">
@@ -1110,7 +162,7 @@
         <div class="sched-content">
           <h3>Wedding Mass</h3>
           <p>A sacred ceremony to bless the beginning of our life together. Please arrive a few minutes early.</p>
-          <span class="sched-address">Nhà thờ Giáo xứ Kim Bích<br>Đường Khu Phố 2, Nguyễn Ái Quốc, Hố Nai, Long Bình, Đồng Nai</span>
+          <span class="sched-address">Kim Bich Church<br>Nguyen Ai Quoc Street, Ho Nai, Long Binh, Dong Nai</span>
           <span class="sched-tag">Church Ceremony</span>
         </div>
       </div>
@@ -1119,7 +171,7 @@
         <div class="sched-content">
           <h3>Reception Begins</h3>
           <p>Doors open. Come hungry, come happy.</p>
-          <span class="sched-address">Hoa Vien Kim Bich<br>Khu Phố 4, Long Bình, Đồng Nai, Vietnam</span>
+          <span class="sched-address">Hoa Vien Kim Bich<br>Area 4, Long Binh, Dong Nai, Vietnam</span>
           <span class="sched-tag">Lunch and Celebration</span>
         </div>
       </div>
@@ -1135,6 +187,12 @@
   </div>
 </section>
 
+<!-- SECTION DIVIDER -->
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-flower"></div>
+</div>
+
 <section id="dresscode">
   <div class="section-inner">
     <p class="section-label">What to Wear</p>
@@ -1149,79 +207,362 @@
   </div>
 </section>
 
-<section id="rsvp">
-  <div class="section-inner">
-    <p class="section-label">Kindly Reply</p>
-    <h2 class="section-title">Will you <em>join us?</em></h2>
-    <p class="section-body">Please let us know you are coming. We cannot wait to celebrate with you.</p>
-    <form class="rsvp-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="first_name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="last_name" placeholder="Your surname" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="attending">Attending?</label>
-          <select id="attending" name="attending" required>
-            <option value="" disabled selected>Please select</option>
-            <option value="yes">Joyfully accepts</option>
-            <option value="no">Regretfully declines</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="guests">Number of Guests</label>
-          <select id="guests" name="guests">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="message">A Note for the Couple</label>
-        <textarea id="message" name="message" placeholder="Leave us a warm wish..."></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Send RSVP</button>
-    </form>
-  </div>
-</section>
+<!-- SECTION DIVIDER -->
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-flower"></div>
+</div>
+
+<section id="rsvp"><div class="section-inner"><p class="section-label">Kindly Reply</p><h2 class="section-title">Will you <em>join us?</em></h2><p class="section-body">Please let us know. We can't wait to celebrate with you.</p>
+  <form class="rsvp-form" id="rsvpForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="efd6dee8-a454-4cf7-bd7d-28db5ed79d37">
+    <input type="hidden" name="subject" value="New RSVP from Wedding Website">
+    <input type="hidden" name="redirect" value="false">
+    <input type="hidden" name="from_name" value="Steven & Thu Wedding">
+    <div class="form-row"><div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="first_name" placeholder="Your name" required></div>
+    <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="last_name" placeholder="Your surname" required></div></div>
+    <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
+    <div class="form-row"><div class="form-group"><label for="attending">Attending?</label><select id="attending" name="attending" required><option value="" disabled selected>Please select</option><option value="yes">Joyfully accepts</option><option value="no">Regretfully declines</option></select></div>
+    <div class="form-group"><label for="guests">Number of Guests</label><select id="guests" name="guests"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div></div>
+    <div class="form-group"><label for="message">A Note for the Couple</label><textarea id="message" name="message" placeholder="Leave us a warm wish..."></textarea></div>
+    <button type="submit" class="btn-submit">Send RSVP</button>
+    <div id="formAlert" class="alert-message" style="display:none;"></div>
+  </form>
+</div></section>
 
 <footer>
-  <p class="footer-names">Steven Vũ <em>&amp;</em> Anh Thư</p>
+  <p class="footer-names">Steven Vu <em>&amp;</em> Anh Thu</p>
   <div class="footer-rule"></div>
-  <p>October 10, 2026 &nbsp;·&nbsp; Hoa Vien Kim Bich, Đồng Nai, Vietnam</p>
+  <p>October 10, 2026 &nbsp;·&nbsp; Hoa Vien Kim Bich, Dong Nai, Vietnam</p>
   <p style="margin-top:0.8rem">made with love and matcha latte</p>
 </footer>
 
-<!-- MUSIC ELEMENTS WITH MUSIC NOTE ICON AND RANDOM SONG SELECTION -->
-<audio id="bgMusic" loop preload="auto">
+<!-- MUSIC PLAYER WITH CONTROLS -->
+<audio id="bgMusic" preload="auto">
   <source src="" id="musicSource">
   Your browser does not support the audio element.
 </audio>
 
-<button id="musicBtn" class="music-btn">
-  <!-- Music Note Icon (shown when paused) -->
-  <svg class="icon icon-music" viewBox="0 0 24 24" width="30" height="30" fill="white">
-    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-  </svg>
-  <!-- Pause Icon (shown when playing) -->
-  <svg class="icon icon-pause" viewBox="0 0 24 24" width="30" height="30" fill="white" style="display: none;">
-    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-  </svg>
-</button>
+<div id="musicControls" class="music-controls">
+  <div class="music-title">Listen to our playlist! 🎵</div>
+  <div class="now-playing">
+    <span id="currentSongName">No song playing</span>
+  </div>
+  <div class="control-buttons">
+    <button id="shuffleBtn" class="control-btn" title="Shuffle">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+      </svg>
+    </button>
+    <button id="prevBtn" class="control-btn" title="Previous">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+      </svg>
+    </button>
+    <button id="playPauseBtn" class="control-btn play-btn" title="Play/Pause">
+      <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <svg class="icon-pause" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="display: none;">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+    <button id="nextBtn" class="control-btn" title="Next">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+      </svg>
+    </button>
+    <button id="loopBtn" class="control-btn" title="Loop">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+      </svg>
+    </button>
+  </div>
+  <div class="music-progress">
+    <span class="music-time current" id="currentTime">0:00</span>
+    <input type="range" id="progressSlider" min="0" max="100" value="0">
+    <span class="music-time" id="duration">0:00</span>
+  </div>
+  <div class="music-volume">
+    <span class="volume-icon" id="volumeIcon" title="Mute/Unmute">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+      </svg>
+    </span>
+    <input type="range" id="volumeSlider" min="0" max="100" value="30">
+  </div>
+</div>
 
 <script>
+  // ============================================
+  // SAKURA PETALS FALLING ANIMATION
+  // ============================================
+  class SakuraPetal {
+    constructor(container) {
+      this.container = container;
+      this.el = document.createElement('div');
+      this.el.classList.add('sakura-petal');
+
+      const baseSize = Math.min(window.innerWidth, window.innerHeight);
+      const size = (Math.random() * 2.5 + 2.5) * (baseSize / 100);
+      this.el.style.width = size + 'px';
+      this.el.style.height = size + 'px';
+
+      // Start position
+      this.x = Math.random() * window.innerWidth;
+      this.y = -50;
+
+      // Velocity
+      this.vx = Math.random() * 0.5 - 0.25;
+      this.vy = Math.random() * 0.5 + 0.5;
+
+      // Rotation
+      this.rotation = Math.random() * 360;
+      this.spin = Math.random() * 1.5 - 1;
+
+      // Wind offset seed
+      this.windOffset = Math.random() * 1000;
+
+      const isHeart = Math.random() < 0.05; // slightly rarer in the air
+      
+      this.el.appendChild(isHeart ? this.createHeartSVG() : this.createLeafSVG());
+      container.appendChild(this.el);
+    }
+
+    update(time) {
+      // 🌬️ Smooth wind using sine waves
+      const wind =
+        Math.sin(time * 0.002 + this.windOffset) * 0.5 +
+        Math.sin(time * 0.001 + this.windOffset) * 0.6;
+
+      // Apply physics
+      this.vx += wind * 0.04;      // wind force
+      this.vy += 0.004;             // gravity
+
+      // Drag (prevents runaway speed)
+      this.vx *= 0.99;
+      this.vy *= 0.995;
+
+      this.x += this.vx;
+      this.y += this.vy;
+
+      this.rotation += this.spin;
+
+      // Apply transform
+      this.el.style.transform = `
+        translate(${this.x}px, ${this.y}px)
+        rotate(${this.rotation}deg)
+      `;
+
+      // Remove if off screen
+      if (this.y > window.innerHeight + 50) {
+        this.el.remove();
+        return false;
+      }
+
+      return true;
+    }
+
+    createLeafSVG() {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 100 100');
+
+      // Random soft leaf colors
+      const colors = [
+        '#d97b8b',
+        '#c4576b',
+        '#b84d63',
+        '#a63d55',
+        '#e07a8f'
+      ];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      // 🍃 Main leaf shape (curved teardrop)
+      const leaf = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      leaf.setAttribute('d', `
+        M50 10
+        C80 20, 85 60, 50 90
+        C15 60, 20 20, 50 10
+        Z
+      `);
+      leaf.setAttribute('fill', color);
+      leaf.setAttribute('opacity', '0.50');
+
+      // 🌿 Center vein
+      const vein = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      vein.setAttribute('d', 'M50 15 C52 40, 48 65, 50 85');
+      vein.setAttribute('stroke', 'rgba(255,255,255,0.4)');
+      vein.setAttribute('stroke-width', '1.5');
+      vein.setAttribute('fill', 'none');
+
+      // ✨ subtle highlight
+      const highlight = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      highlight.setAttribute('d', `
+        M50 20
+        C65 30, 65 60, 50 80
+      `);
+      highlight.setAttribute('stroke', 'rgba(255,255,255,0.25)');
+      highlight.setAttribute('stroke-width', '2');
+      highlight.setAttribute('fill', 'none');
+
+      svg.appendChild(leaf);
+      svg.appendChild(vein);
+      svg.appendChild(highlight);
+
+      return svg;
+    }
+
+    createHeartSVG() {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 100 100');
+
+      const colors = ['#ff6b81', '#ff8fa3', '#ff4d6d', '#ff758f'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      const heart = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      heart.setAttribute('d', `
+        M50 85
+        C20 60, 5 40, 25 25
+        C40 10, 50 25, 50 25
+        C50 25, 60 10, 75 25
+        C95 40, 80 60, 50 85
+        Z
+      `);
+      heart.setAttribute('fill', color);
+      heart.setAttribute('opacity', '0.50');
+
+      svg.appendChild(heart);
+      return svg;
+    }
+  }
+
+  
+
+  // Start petals when DOM is ready
+  function startPetals() {
+    const container = document.getElementById('sakuraContainer');
+    if (!container) {
+      setTimeout(startPetals, 100);
+      return;
+    }
+    
+    // Keep creating petals
+    setInterval(() => {
+      petals.push(new SakuraPetal(container));
+    }, 720);
+
+    requestAnimationFrame(animate);
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startPetals);
+  } else {
+    startPetals();
+  }
+
+  // ============================================
+  // SIDE DECORATIONS
+  // ============================================
+
+
+  function initSideDecorations() {
+    // Floral vine SVG pattern
+    const createLeafSVG = () => {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 100 100');
+
+      // Random soft leaf colors
+      const colors = ['#d97b8b', '#e8a8b8', '#f4d0d8', '#c4576b', '#b86a7a'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      // 🍃 Main leaf shape (curved teardrop)
+      const leaf = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      leaf.setAttribute('d', `
+        M50 10
+        C80 20, 85 60, 50 90
+        C15 60, 20 20, 50 10
+        Z
+      `);
+      leaf.setAttribute('fill', color);
+      leaf.setAttribute('opacity', '0.50');
+
+      // 🌿 Center vein
+      const vein = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      vein.setAttribute('d', 'M50 15 C52 40, 48 65, 50 85');
+      vein.setAttribute('stroke', 'rgba(255,255,255,0.4)');
+      vein.setAttribute('stroke-width', '1.5');
+      vein.setAttribute('fill', 'none');
+
+      // ✨ subtle highlight
+      const highlight = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      highlight.setAttribute('d', `
+        M50 20
+        C65 30, 65 60, 50 80
+      `);
+      highlight.setAttribute('stroke', 'rgba(255,255,255,0.25)');
+      highlight.setAttribute('stroke-width', '2');
+      highlight.setAttribute('fill', 'none');
+
+      svg.appendChild(leaf);
+      svg.appendChild(vein);
+      svg.appendChild(highlight);
+
+      return svg;
+    }
+
+    const createHeartSVG = () => {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 100 100');
+
+      const colors = ['#ff6b81', '#ff8fa3', '#ff4d6d', '#ff758f'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      const heart = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      heart.setAttribute('d', `
+        M50 85
+        C20 60, 5 40, 25 25
+        C40 10, 50 25, 50 25
+        C50 25, 60 10, 75 25
+        C95 40, 80 60, 50 85
+        Z
+      `);
+      heart.setAttribute('fill', color);
+      heart.setAttribute('opacity', '0.50');
+
+      // subtle highlight
+      const shine = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      shine.setAttribute('d', `
+        M50 30
+        C40 35, 35 50, 50 70
+      `);
+      shine.setAttribute('stroke', 'rgba(255,255,255,0.3)');
+      shine.setAttribute('stroke-width', '2');
+      shine.setAttribute('fill', 'none');
+
+      svg.appendChild(heart);
+      svg.appendChild(shine);
+
+      return svg;
+    };
+
+    const createDecoElement = () => {
+      const deco = document.createElement('div');
+      deco.classList.add('deco-element');
+
+      const isHeart = Math.random() < 0.15;
+
+      deco.appendChild(isHeart ? createHeartSVG() : createLeafSVG());
+
+      return deco;
+    };
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSideDecorations);
+  } else {
+    initSideDecorations();
+  }
+
   // ============================================
   // CAROUSEL - CONTINUOUS ANIMATION
   // ============================================
@@ -1305,94 +646,361 @@
     });
   }
 
+  const petals = [];
+
+  function animate(time) {
+    for (let i = petals.length - 1; i >= 0; i--) {
+      const alive = petals[i].update(time);
+      if (!alive) petals.splice(i, 1);
+    }
+
+    requestAnimationFrame(animate);
+  }
+
   // ============================================
-  // MUSIC BUTTON WITH RANDOM SONG SELECTION
+  // MUSIC PLAYER WITH SHUFFLE, LOOP, AND CONTROLS
   // ============================================
 
   // List of available music files in the music folder
   const musicFiles = [
-    'music/leehi-only.mp3'
+    'music/leehi - only.mp3',
+    'music/mashup lễ Đường x một dời mobuds ft wenne.mp3',
+    'music/natty - sugarcoat.mp3',
+    'music/rei yasuda - mirror.mp3',
+    'music/stephanie poetri - I love you 3000.mp3',
+    'music/vaundy - kaijuu no hanauta.mp3',
+    'music/westlife - beautiful in white.mp3',
+    'music/westlife - nothing\'s gonna change my love for you.mp3',
   ];
   
-  // Function to get random music file
-  function getRandomMusic() {
-    const randomIndex = Math.floor(Math.random() * musicFiles.length);
-    return musicFiles[randomIndex];
+  // Playlist state
+  let playlist = [];
+  let currentIndex = 0;
+  let isShuffled = false;
+  let isLooping = true;
+  let isPlaying = false;
+  
+  // Get references to elements
+  let music, musicSource;
+  
+  // Shuffle the playlist
+  function shufflePlaylist() {
+    playlist = [...musicFiles];
+    // Fisher-Yates shuffle
+    for (let i = playlist.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [playlist[i], playlist[j]] = [playlist[j], playlist[i]];
+    }
+    currentIndex = 0;
+    isShuffled = true;
   }
   
-  document.addEventListener('DOMContentLoaded', function() {
-    const music = document.getElementById('bgMusic');
-    const musicBtn = document.getElementById('musicBtn');
-    const musicIcon = document.querySelector('.icon-music');
-    const pauseIcon = document.querySelector('.icon-pause');
-    const musicSource = document.getElementById('musicSource');
-    let isPlaying = false;
-    let currentRotation = 0;
-    let currentSong = null;
+  // Reset to original order
+  function resetPlaylist() {
+    playlist = [...musicFiles];
+    // Find current song in original playlist
+    const currentSong = musicFiles[currentIndex];
+    currentIndex = playlist.indexOf(currentSong);
+    if (currentIndex === -1) currentIndex = 0;
+    isShuffled = false;
+  }
+  
+  // Get current song name from filename
+  function getSongName(path) {
+    const filename = path.split('/').pop().replace('.mp3', '');
+    return filename.replace(/-/g, ' ').replace(/_/g, ' ');
+  }
+  
+  // Load a specific song by index
+  function loadSong(index) {
+    if (index < 0 || index >= playlist.length) return;
+    currentIndex = index;
+    const song = playlist[currentIndex];
+    musicSource.src = song;
+    music.load();
     
-    if (music && musicBtn) {
+    // Update now playing display
+    const songNameEl = document.getElementById('currentSongName');
+    if (songNameEl) {
+      songNameEl.textContent = getSongName(song);
+    }
+  }
+  
+  // Play next song
+  function playNext() {
+    let nextIndex = currentIndex + 1;
+    if (nextIndex >= playlist.length) {
+      if (isLooping) {
+        nextIndex = 0;
+      } else {
+        // Stop playing if not looping
+        isPlaying = false;
+        updatePlayPauseButton();
+        return;
+      }
+    }
+    loadSong(nextIndex);
+    if (isPlaying) {
+      music.play().catch(error => console.log('Play error:', error));
+    }
+  }
+  
+  // Play previous song
+  function playPrevious() {
+    let prevIndex = currentIndex - 1;
+    if (prevIndex < 0) {
+      prevIndex = playlist.length - 1;
+    }
+    loadSong(prevIndex);
+    if (isPlaying) {
+      music.play().catch(error => console.log('Play error:', error));
+    }
+  }
+  
+  // Update play/pause button visual
+  function updatePlayPauseButton() {
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    
+    if (playPauseBtn) {
+      const iconPlay = playPauseBtn.querySelector('.icon-play');
+      const iconPause = playPauseBtn.querySelector('.icon-pause');
+      if (isPlaying) {
+        playPauseBtn.classList.add('playing');
+        if (iconPlay) iconPlay.style.display = 'none';
+        if (iconPause) iconPause.style.display = 'block';
+      } else {
+        playPauseBtn.classList.remove('playing');
+        if (iconPlay) iconPlay.style.display = 'block';
+        if (iconPause) iconPause.style.display = 'none';
+      }
+    }
+  }
+  
+  // Update button states
+  function updateButtonStates() {
+    const shuffleBtn = document.getElementById('shuffleBtn');
+    const loopBtn = document.getElementById('loopBtn');
+    
+    if (shuffleBtn) {
+      shuffleBtn.classList.toggle('active', isShuffled);
+    }
+    if (loopBtn) {
+      loopBtn.classList.toggle('active', isLooping);
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const hero = document.getElementById('hero');
+    const familySides = document.querySelectorAll('.family-side');
+    const musicControls = document.getElementById('musicControls');
+
+    if (!hero || !musicControls) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // HERO is visible → hide music player
+            musicControls.classList.remove('visible');
+          } else {
+            // HERO is gone → show music player
+            musicControls.classList.add('visible');
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.3 // adjust sensitivity here
+      }
+    );
+    observer.observe(hero);
+
+    const familyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.2
+      }
+    );
+    familySides.forEach(side => familyObserver.observe(side));
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get element references
+    music = document.getElementById('bgMusic');
+    musicSource = document.getElementById('musicSource');
+    
+    // Initialize playlist
+    playlist = [...musicFiles];
+    
+    if (music) {
       music.volume = 0.3;
       
-      // Set initial random song
-      function loadRandomSong() {
-        const newSong = getRandomMusic();
-        currentSong = newSong;
-        musicSource.src = currentSong;
-        music.load();
-        console.log('Loaded song:', currentSong);
+      // Load first song
+      loadSong(0);
+      
+      // Shuffle button
+      const shuffleBtn = document.getElementById('shuffleBtn');
+      if (shuffleBtn) {
+        shuffleBtn.addEventListener('click', function() {
+          if (isShuffled) {
+            resetPlaylist();
+          } else {
+            shufflePlaylist();
+          }
+          loadSong(currentIndex);
+          updateButtonStates();
+        });
       }
       
-      // Load first random song
-      loadRandomSong();
+      // Previous button
+      const prevBtn = document.getElementById('prevBtn');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+          playPrevious();
+        });
+      }
       
-      musicBtn.addEventListener('click', function() {
-        if (!isPlaying) {
-          // Load a new random song if one isn't loaded or if we want fresh each time
-          // Uncomment the line below if you want a NEW random song EVERY time you play
-          // loadRandomSong();
-          
-          // Play music
-          music.play().then(() => {
-            musicBtn.classList.add('playing');
-            if (musicIcon) musicIcon.style.display = 'none';
-            if (pauseIcon) pauseIcon.style.display = 'block';
-            isPlaying = true;
-          }).catch(error => {
-            console.log('Playback error:', error);
-            alert('Please click again to play music. Browser requires user interaction.');
+      // Play/Pause button in controls
+      const playPauseBtn = document.getElementById('playPauseBtn');
+      if (playPauseBtn) {
+        playPauseBtn.addEventListener('click', function() {
+          if (!isPlaying) {
+            music.play().then(() => {
+              isPlaying = true;
+              updatePlayPauseButton();
+            }).catch(error => {
+              console.log('Playback error:', error);
+            });
+          } else {
+            music.pause();
+            isPlaying = false;
+            updatePlayPauseButton();
+          }
+        });
+      }
+      
+      // Next button
+      const nextBtn = document.getElementById('nextBtn');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+          playNext();
+        });
+      }
+      
+      // Loop button
+      const loopBtn = document.getElementById('loopBtn');
+      if (loopBtn) {
+        loopBtn.addEventListener('click', function() {
+          isLooping = !isLooping;
+          updateButtonStates();
+        });
+      }
+      
+      // Progress slider and duration display
+      const progressSlider = document.getElementById('progressSlider');
+      const currentTimeEl = document.getElementById('currentTime');
+      const durationEl = document.getElementById('duration');
+      
+      // Format time helper
+      function formatTime(seconds) {
+        if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return mins + ':' + (secs < 10 ? '0' : '') + secs;
+      }
+      
+      // Update progress when metadata loads
+      if (music) {
+        music.addEventListener('loadedmetadata', function() {
+          if (durationEl) durationEl.textContent = formatTime(music.duration);
+          if (progressSlider) {
+            progressSlider.max = Math.floor(music.duration);
+            progressSlider.value = 0;
+          }
+        });
+        
+        // Update current time and slider as music plays
+        music.addEventListener('timeupdate', function() {
+          if (progressSlider && !progressSlider.matches(':active')) {
+            progressSlider.value = music.currentTime;
+            progressSlider.style.setProperty('--progress', (music.currentTime / music.duration * 100) + '%');
+          }
+          if (currentTimeEl) currentTimeEl.textContent = formatTime(music.currentTime);
+        });
+        
+        // Seek when slider is moved
+        if (progressSlider) {
+          progressSlider.addEventListener('input', function() {
+            music.currentTime = progressSlider.value;
+            progressSlider.style.setProperty('--progress', (progressSlider.value / progressSlider.max * 100) + '%');
           });
-        } else {
-          // Pause music - capture current rotation
-          if (pauseIcon) {
-            const transform = pauseIcon.style.transform;
-            if (transform) {
-              const match = transform.match(/rotate\(([\d.]+)deg\)/);
-              if (match) {
-                currentRotation = parseFloat(match[1]);
-              }
-            }
-          }
           
-          music.pause();
-          musicBtn.classList.remove('playing');
-          if (musicIcon) musicIcon.style.display = 'block';
-          if (pauseIcon) pauseIcon.style.display = 'none';
-          
-          // Maintain the rotation position on the music icon
-          if (musicIcon) {
-            musicIcon.style.transform = `translate(-50%, -50%) rotate(${currentRotation}deg)`;
-          }
-          isPlaying = false;
+          progressSlider.addEventListener('change', function() {
+            music.currentTime = progressSlider.value;
+          });
         }
+      }
+      
+      // Volume control
+      const volumeSlider = document.getElementById('volumeSlider');
+      const volumeIcon = document.getElementById('volumeIcon');
+      let previousVolume = 30;
+      
+      if (volumeSlider) {
+        // Set initial volume display
+        volumeSlider.style.setProperty('--volumelevel', '30%');
+        
+        volumeSlider.addEventListener('input', function() {
+          const volume = volumeSlider.value / 100;
+          music.volume = volume;
+          volumeSlider.style.setProperty('--volumelevel', volumeSlider.value + '%');
+          updateVolumeIcon(volume);
+        });
+        
+        // Mute/unmute on icon click
+        if (volumeIcon) {
+          volumeIcon.addEventListener('click', function() {
+            if (music.volume > 0) {
+              previousVolume = music.volume * 100;
+              music.volume = 0;
+              volumeSlider.value = 0;
+              volumeSlider.style.setProperty('--volumelevel', '0%');
+            } else {
+              music.volume = previousVolume / 100;
+              volumeSlider.value = previousVolume;
+              volumeSlider.style.setProperty('--volumelevel', previousVolume + '%');
+            }
+            updateVolumeIcon(music.volume);
+          });
+        }
+        
+        function updateVolumeIcon(vol) {
+          if (!volumeIcon) return;
+          const svg = volumeIcon.querySelector('svg');
+          if (vol === 0) {
+            svg.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
+          } else if (vol < 0.5) {
+            svg.innerHTML = '<path d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"/>';
+          } else {
+            svg.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+          }
+        }
+      }
+      
+      // When song ends
+      music.addEventListener('ended', function() {
+        playNext();
       });
       
-      // Optional: Load a new random song when the current one ends
-      music.addEventListener('ended', function() {
-        loadRandomSong();
-        if (isPlaying) {
-          music.play().catch(error => console.log('Auto-play error:', error));
-        }
-      });
+      // Update button states on load
+      updateButtonStates();
     }
   });
 </script>
