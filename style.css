@@ -161,7 +161,7 @@ nav a:hover::after{
 }
 
 /* ========== HERO SECTION ========== */
-#hero{
+#hero {
     min-height:100vh;
     display:flex;
     flex-direction:column;
@@ -662,162 +662,192 @@ section{padding:7rem 2rem;position:relative;z-index:2}
 }
 
 /* ========== FAMILY SECTION ========== */
-#family{
-  background:linear-gradient(180deg, rgba(238, 255, 255, 0.15) 0%, rgba(255, 254, 241, 0.3) 100%);
+/* =======================
+   FAMILY SECTION – MINIMALIST VERTICAL with Rings Image
+   ======================= */
+/* =======================
+   FAMILY SECTION – with 4rem rings
+   ======================= */
+#family {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.16)
+    ),
+    url("images/family-background.jpg");
+  background-size: auto 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
-.family-container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:4rem;
-  margin-top:3rem;
-  padding:3rem 0;
+#family .section-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#family,
+#family * {
+  font-weight: 300;
+}
+
+#family .section-label {
+  color: #c4a35a;
+  letter-spacing: 0.3em;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+#family .section-title {
+  color: #1a1a1a;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+#family .section-title em {
+  color: #c4a35a;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.family-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin: 2rem 0 3rem;
 }
 
 .family-side {
-    text-align:center;
-    opacity: 0;
-    transform: translateY(4rem);
-    transition: all 1.8s ease;
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
 }
 
-.family-side.visible {
-    opacity: 1;
-    transform: translateY(0);
+.family-side h3 {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c4a35a;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
 }
 
-.family-side h3{
-  font-family:var(--serif);
-  font-size:1.5rem;
-  font-weight:300;
-  color:var(--rose-deep);
-  letter-spacing:0.05em;
+.couple-names {
+  color: #c4a35a;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
-.family-members{
-  display:flex;
-  flex-direction:column;
-  gap:1.8rem;
+.gold-amp {
+  display: inline-block;
+  font-size: 1rem;
+  color: #c4a35a;
+  margin: 0.2rem 0;
+  font-weight: 300;
 }
 
-.family-member{
-  padding:1.2rem;
-  background:rgba(255,255,255,0.6);
-  border-radius:4px;
-  backdrop-filter:blur(8px);
-  transition:all 0.3s ease;
-  border:1px solid rgba(196,87,107,0.1);
+.family-announcement {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(196, 163, 90, 0.3);
 }
 
-.family-member:hover{
-  transform:translateY(-2px);
-  background:rgba(255,255,255,0.9);
-  box-shadow:0 8px 24px rgba(196,87,107,0.1);
+.announcement-overline {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c4a35a;
+  font-weight: 300;
 }
 
-.family-role{
-  font-size:0.85rem;
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-  color:var(--sage-dark);
-  margin-bottom:0.4rem;
-  font-weight:500;
+.announcement-subtitle {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin: 1rem 0 0.5rem;
+  font-weight: 300;
 }
 
-.family-names{
-  font-family:var(--serif);
-  font-size:1.2rem;
-  color:var(--garden-dark);
-  font-weight:300;
-  line-height:1.6;
+.announcement-heading {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
 }
 
-.family-divider{
-  text-align:center;
-  margin:2rem 0;
+/* Rings: width 4rem */
+.rings-image,
+.rings-icon-vertical {
+  width: 4rem;
+  height: auto;
+  opacity: 0.85;
+  display: block;
+  margin: 0 auto;
 }
 
-.family-divider::before{
-  content:'';
-  display:inline-block;
-  width:40px;
-  height:2px;
-  background:linear-gradient(90deg, var(--rose-deep), var(--gold-accent));
-  vertical-align:middle;
-  margin:0 1rem;
+.announcement-rings-img,
+.announce-ring-img-vertical {
+  text-align: center;
+  margin: 1rem 0;
 }
 
-.family-divider::after{
-  content:'';
-  display:inline-block;
-  width:40px;
-  height:2px;
-  background:linear-gradient(90deg, var(--gold-accent), var(--rose-deep));
-  vertical-align:middle;
-  margin:0 1rem;
+.couple-names-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.family-couple {
-  position:relative;
-  padding:2.5rem 2rem;
-  margin-top:1rem;
-  border-radius:12px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.12);
-
-  text-align:center;
+.announce-groom,
+.announce-bride {
+  font-family: "cormorant garamond", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #c4a35a;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  margin: 2rem;
 }
 
-/* subtle elegant hover (very minimal) */
-.family-couple:hover{
-  border-color:rgba(255,255,255,0.25);
+/* Remove hover effects */
+.family-side:hover,
+.couple-names:hover,
+.family-announcement:hover {
+  transform: none;
+  background: none;
+  box-shadow: none;
 }
 
-/* section title */
-.family-couple h4{
-  font-family:'Playfair Display', serif;
-  font-weight:500;
-  letter-spacing:0.28em;
-  text-transform:uppercase;
-  font-size:1.2rem;
-  margin-bottom:1rem;
-  color: #533e08;
-}
-
-/* names */
-.couple-names{  
-  font-family:'Cormorant Garamond', serif;
-  font-size:2.8rem;
-  font-weight:200;
-  line-height:1.6;
-  color:#7b5b0d;
-}
-
-/* decorative ampersand */
-.couple-names em{
-  font-style:normal;
-  display:block;
-  margin:0.5rem 0;
-  font-size:1.6rem;
-  color:rgba(0, 0, 0, 0.8);
-}
-
-.family-side{
-  transition:transform 0.3s ease;
-}
-
-/* optional parent label */
-.family-side h3{
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    color: #533e08;
-}
-
-.family-side:hover{
-  transform:translateY(-4px);
+@media (max-width: 768px) {
+  .family-container {
+    gap: 2rem;
+  }
+  .couple-names {
+    font-size: 1.2rem;
+  }
+  .announce-groom,
+  .announce-bride {
+    font-size: 1.5rem;
+  }
+  .rings-image,
+  .rings-icon-vertical {
+    width: 3rem;   /* slightly smaller on mobile, but still proportional */
+  }
 }
 
 /* ========== SCHEDULE ========== */
@@ -831,7 +861,7 @@ section{padding:7rem 2rem;position:relative;z-index:2}
 
 /* ONLY affects schedule text inside this section */
 #schedule .section-label{
-  color:rgba(255,255,255,0.55);
+  color:rgba(255,255,255,1);
 }
 
 #schedule .section-title{
@@ -839,11 +869,12 @@ section{padding:7rem 2rem;position:relative;z-index:2}
 }
 
 #schedule .section-title em{
-  color:rgba(255,255,255,0.85);
+  color:rgba(255,255,255, 1);
 }
 
 #schedule .section-body{
-  color:rgba(255,255,255,0.65);
+    font-size: 1.3rem;
+    color:rgba(255,255,255, 1);
 }
 
 /* list */
@@ -898,17 +929,17 @@ section{padding:7rem 2rem;position:relative;z-index:2}
 
 /* paragraph */
 #schedule .sched-content p{
-  font-size:1.1rem;
+  font-size:1.3rem;
   line-height:1.8;
-  color:rgba(255,255,255,0.65);
+  color:rgba(255,255,255, 1);
 }
 
 /* address */
 #schedule .sched-address{
   display:block;
   margin-top:0.8rem;
-  font-size:1rem;
-  color:rgba(255,255,255,0.5);
+  font-size:1.2rem;
+  color:rgba(255,255,255, 1);
   font-style:italic;
   line-height:1.7;
   font-weight:300;
@@ -986,11 +1017,18 @@ section{padding:7rem 2rem;position:relative;z-index:2}
 }
 
 /* ========== RSVP ========== */
-#rsvp{
-  background:linear-gradient(180deg,
-    rgba(255,255,255,0.95) 0%,
-    rgba(254,245,240,0.7) 100%);
-  text-align:center;
+#rsvp {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(254, 245, 240, 0.5) 100%
+    ),
+    url("images/floral-background.webp");
+  background-size: 70% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; optional – subtle parallax */
+  text-align: center;
 }
 
 #rsvp .section-inner{
