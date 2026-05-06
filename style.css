@@ -661,13 +661,6 @@ section{padding:7rem 2rem;position:relative;z-index:2}
   border-top:1px solid rgba(196,87,107,0.1);
 }
 
-/* ========== FAMILY SECTION ========== */
-/* =======================
-   FAMILY SECTION – MINIMALIST VERTICAL with Rings Image
-   ======================= */
-/* =======================
-   FAMILY SECTION – with 4rem rings
-   ======================= */
 #family {
   background: linear-gradient(
       to bottom,
@@ -1024,10 +1017,10 @@ section{padding:7rem 2rem;position:relative;z-index:2}
       rgba(254, 245, 240, 0.5) 100%
     ),
     url("images/floral-background.webp");
-  background-size: 70% auto;
+  background-size: auto, cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; optional – subtle parallax */
+  background-attachment: scroll;
   text-align: center;
 }
 
@@ -1453,4 +1446,133 @@ footer::before{
 
 .play-btn.playing .icon-pause{
   display:block;
+}
+
+footer {
+  margin-bottom: 0;
+}
+
+/* Music player – fixed width & responsive */
+.music-controls {
+  width: 320px;
+  max-width: 90vw;
+  transition: all 0.3s ease;
+}
+
+/* Now playing ellipsis */
+.now-playing {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+#currentSongName {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Minimize button – top‑right, visible */
+.minimize-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: rgba(184, 106, 122, 0.15);
+  border: 1px solid rgba(184, 106, 122, 0.4);
+  border-radius: 50%;
+  color: #b86a7a;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+.minimize-btn:hover {
+  background: rgba(184, 106, 122, 0.3);
+  border-color: #b86a7a;
+}
+
+/* Minimized state */
+.music-controls.minimized {
+  height: 48px;
+  overflow: hidden;
+  padding: 8px 12px;
+}
+.music-controls.minimized .control-buttons,
+.music-controls.minimized .music-progress,
+.music-controls.minimized .music-volume,
+.music-controls.minimized .now-playing {
+  display: none;
+}
+.music-controls.minimized .music-title {
+  margin-bottom: 0;
+  font-size: 14px;
+  text-align: left;
+  padding-right: 60px;
+  line-height: 32px;
+}
+
+/* Hide music player at bottom */
+.music-controls.hide-at-bottom {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 480px) {
+  .music-controls {
+    width: 280px;
+  }
+  #currentSongName {
+    max-width: 140px;
+  }
+}
+
+/* Story card backgrounds */
+.quote-card:first-child {
+  background-image: url('images/story-background-1.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 248, 245, 0.85);
+}
+.quote-card.pink-top {
+  background-image: url('images/story-background-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 248, 245, 0.85);
+}
+.quote-card p,
+.quote-card .quote-mark,
+.quote-card .quote-author {
+  position: relative;
+  z-index: 2;
+}
+
+/* Performance optimizations */
+.sakura-petal {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.carousel-slide img {
+  content-visibility: auto;
+}
+nav a {
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+nav a.active {
+  color: #b86a7a;
+  border-bottom: 2px solid #b86a7a;
+  font-weight: 500;
 }
