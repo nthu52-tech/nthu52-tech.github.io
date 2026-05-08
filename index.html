@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Steven Vũ & Anh Thư — Thứ Bảy, ngày 10 tháng 10, năm 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Steven Vũ & Anh Thư — Thứ Bảy, 10 tháng 10, 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@300;400;500&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- No inline styles – everything is now in style.css -->
+  <style>
+    /* Additional inline fixes for hero mobile – ensures the image top is visible */
+    @media (max-width: 768px) {
+      #hero {
+        background-position: top center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+      }
+    }
+    /* Active state for shuffle/loop buttons */
+    .control-btn.active {
+      color: var(--rose-deep);
+      background: rgba(196, 87, 107, 0.15);
+      transform: scale(1.05);
+    }
+    .control-btn.active svg {
+      fill: var(--rose-deep);
+    }
+  </style>
 </head>
 <body>
 
@@ -35,15 +53,15 @@
 <section id="gallery">
   <div class="carousel" aria-label="Photo carousel">
     <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide active"><img src="images/image0.jpg" alt="Photo 1" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image1.jpg" alt="Photo 2" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image2.jpg" alt="Photo 3" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image3.jpg" alt="Photo 4" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image4.jpg" alt="Photo 5" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image5.jpg" alt="Photo 6" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image6.jpg" alt="Photo 7" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image7.jpg" alt="Photo 8" data-focus="center" loading="lazy"></div>
-      <div class="carousel-slide"><img src="images/image8.jpg" alt="Photo 9" data-focus="center" loading="lazy"></div>
+      <div class="carousel-slide active"><img src="images/image0.jpg" alt="Photo 1" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image1.jpg" alt="Photo 2" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image2.jpg" alt="Photo 3" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image3.jpg" alt="Photo 4" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image4.jpg" alt="Photo 5" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image5.jpg" alt="Photo 6" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image6.jpg" alt="Photo 7" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image7.jpg" alt="Photo 8" loading="lazy"></div>
+      <div class="carousel-slide"><img src="images/image8.jpg" alt="Photo 9" loading="lazy"></div>
     </div>
     <div class="carousel-dots" id="carouselDots"></div>
   </div>
@@ -53,10 +71,10 @@
 
 <section id="story">
   <div class="section-inner">
-    <p class="section-label" style="text-align:center">Our Story</p>
-    <h2 class="section-title" style="text-align:center">Qua lời kể <em>của chúng mình</em></h2>
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">Qua lời kể <em>của chúng mình</em></h2>
     <div class="story-grid">
-      <div class="quote-card">
+      <div class="quote-card pink-top">
         <span class="quote-mark">"</span>
         <p class="quote-text">Mình biết Thư là người dành cho mình khi mình nhận ra rằng mình không còn phải cố gắng trở thành một ai khác, hay chỉ dám bộc lộ một phần con người mình. Mình đã tìm được một người mà mình có thể hoàn toàn sống thật, cả trong suy nghĩ lẫn cách mình hành động. Mình có thể là chính mình, đôi khi kỳ quặc, đầu tóc bù xù, không chỉn chu, nhưng Thư vẫn luôn ở đó, quan tâm và yêu thương mình nhiều hơn vì chính con người của mình. Khi ở bên Thư, mình cảm thấy như tất cả những mảnh ghép rời rạc trong trái tim mình cuối cùng cũng được kết nối lại, giống như tìm thấy mảnh ghép hoàn chỉnh cho một bức tranh mà trước đó mình thậm chí còn không biết là nó đang thiếu. Mình nhận ra rằng chỉ được Thư yêu thôi là chưa đủ; mình muốn ở bên Thư, cùng Thư đi qua mọi điều và trở thành chỗ dựa cho nhau.</p>
         <p class="quote-text">Đó là khi mình biết rằng, em chính là một nửa còn lại của mình.</p> 
@@ -82,7 +100,7 @@
     <h2 class="section-title">Đại diện <em>Hai họ</em></h2>
     <div class="family-container">
       <div class="family-side"><h3>Gia đình Nhà Trai</h3><div class="couple-names">Ông Giuse Vũ Hoàng Minh<br><span class="gold-amp">&amp;</span><br>Bà Rosa Lê Thị Kim Liên</div></div>
-      <div class="family-side"><h3>Gia đình Nhà Gái</h3><div class="couple-names"> Ông Laurenso Nguyễn Trí Dũng<br><span class="gold-amp">&amp;</span><br>Bà Rosa Maria Trần Thị Ngọc Linh</div></div>
+      <div class="family-side"><h3>Gia đình Nhà Gái</h3><div class="couple-names">Ông Laurenso Nguyễn Trí Dũng<br><span class="gold-amp">&amp;</span><br>Bà Rosa Maria Trần Thị Ngọc Linh</div></div>
     </div>
     <div class="family-announcement">
       <div class="announcement-overline">TRÂN TRỌNG BÁO TIN</div>
@@ -105,8 +123,8 @@
     <h2 class="section-title">Lịch trình <em>trong ngày</em></h2>
     <p class="section-body">Kính mời quý vị cùng chung vui trọn vẹn ngày đặc biệt của chúng mình, từ thánh lễ thiêng liêng buổi sáng đến tiệc mừng buổi trưa với niềm vui, ấm áp và những khoảnh khắc đáng nhớ.</p>
     <div class="schedule-list">
-      <div class="schedule-item"><div class="sched-time">8:30 AM          |          10.10.2026</div><div class="sched-content"><h3>Thánh lễ Hôn Phối</h3><p>Nghi thức thiêng liêng chúc phúc cho khởi đầu hành trình chung đôi. Kính mong quý vị đến sớm ít phút để cùng cô dâu chú rể lưu lại những hình ảnh đẹp.</p><span class="sched-address">tại Nhà thờ Giáo xứ Kim Bích<br>đường Nguyễn Ái Quốc, phường Long Bình, TP. Đồng Nai</span><span class="sched-tag">Church Ceremony</span></div></div>
-      <div class="schedule-item"><div class="sched-time">11:00 AM          |          10.10.2026</div><div class="sched-content"><h3>Khai tiệc</h3><p>Hân hoan đón khách. Kính mời quý vị nhập tiệc trong không khí ấm cúng và thân tình.</p><span class="sched-address">Hoa Viên Kim Bích<br>Khu phố 4, phường Long Bình, TP. Đồng Nai, Việt Nam</span><span class="sched-tag">Lunch and Celebration</span></div></div>
+      <div class="schedule-item"><div class="sched-time">8:30 AM | 10.10.2026</div><div class="sched-content"><h3>Thánh lễ Hôn Phối</h3><p>Nghi thức thiêng liêng chúc phúc cho khởi đầu hành trình chung đôi. Kính mong quý vị đến sớm ít phút để cùng cô dâu chú rể lưu lại những hình ảnh đẹp.</p><span class="sched-address">tại Nhà thờ Giáo xứ Kim Bích<br>đường Nguyễn Ái Quốc, phường Long Bình, TP. Đồng Nai</span><span class="sched-tag">Church Ceremony</span></div></div>
+      <div class="schedule-item"><div class="sched-time">11:00 AM | 10.10.2026</div><div class="sched-content"><h3>Khai tiệc</h3><p>Hân hoan đón khách. Kính mời quý vị nhập tiệc trong không khí ấm cúng và thân tình.</p><span class="sched-address">Hoa Viên Kim Bích<br>Khu phố 4, phường Long Bình, TP. Đồng Nai, Việt Nam</span><span class="sched-tag">Lunch and Celebration</span></div></div>
       <div class="schedule-item"><div class="sched-time">1:00 PM</div><div class="sched-content"><h3>Kết thúc bữa tiệc</h3><p>Chân thành cảm ơn quý vị đã đến chung vui và chia sẻ ngày ý nghĩa này cùng gia đình chúng tôi.</p><span class="sched-tag">Close of Event</span></div></div>
     </div>
   </div>
@@ -131,30 +149,28 @@
     <input type="hidden" name="subject" value="New RSVP from Wedding Website">
     <input type="hidden" name="redirect" value="false">
     <input type="hidden" name="from_name" value="Steven & Thu Wedding">
-    <!-- <div class="form-row"> -->
-      <div class="form-group"><label for="fname">Tên của bạn</label><input type="text" id="fname" name="first_name" placeholder="Your name" required></div>
-    <!-- <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="last_name" placeholder="Your surname" required></div></div>
-    <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div> -->
-    <div class="form-row"><div class="form-group"><label for="attending">Bạn sẽ tham dự chứ?</label><select id="attending" name="attending" required><option value="" disabled selected>Please select</option><option value="yes">Có, tôi sẽ đến 🥰</option><option value="no">Xin lỗi, tôi không tham dự được ☺️</option></select></div>
+    <div class="form-row"><div class="form-group"><label for="fname">Tên của bạn</label><input type="text" id="fname" name="first_name" placeholder="Tên của bạn" required></div>
+    <div class="form-group"><label for="lname">Họ của bạn</label><input type="text" id="lname" name="last_name" placeholder="Họ của bạn" required></div></div>
+    <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
+    <div class="form-row"><div class="form-group"><label for="attending">Bạn sẽ tham dự chứ?</label><select id="attending" name="attending" required><option value="" disabled selected>Vui lòng chọn</option><option value="yes">Có, tôi sẽ đến 🥰</option><option value="no">Xin lỗi, tôi không tham dự được ☺️</option></select></div>
     <div class="form-group"><label for="guests">Số khách tham dự</label><select id="guests" name="guests"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div></div>
     <div class="form-group"><label for="message">Đôi lời gửi gắm cho cô dâu chú rể</label><textarea id="message" name="message" placeholder="Gửi đôi lời chúc mừng đến chúng mình nhé ✨"></textarea></div>
-    <button type="submit" class="btn-submit">Xác nhận💌</button>
+    <button type="submit" class="btn-submit">Xác nhận 💌</button>
     <div id="formAlert" class="alert-message" style="display:none;"></div>
   </form>
 </div></section>
 
 <footer>
-  <p class="footer-names">Steven Vũ <em>&amp;</em> Anh Thư
+  <p class="footer-names">Steven Vũ <em>&amp;</em> Anh Thư</p>
   <div class="footer-rule"></div>
   <p>10.10.2026 &nbsp;·&nbsp; Hoa Viên Kim Bích, TP. Đồng Nai, Việt Nam</p>
   <p style="margin-top:0.8rem">meticulously made with our love</p>
 </footer>
 
 <audio id="bgMusic" preload="auto"></audio>
-
 <div id="musicControls" class="music-controls">
   <button class="minimize-btn" id="minimizeBtn" title="Collapse">−</button>
-  <div class="music-title">Cùng nghe playlist của chúng mình nhé!🎵</div>
+  <div class="music-title">Cùng nghe playlist của chúng mình nhé! 🎵</div>
   <div class="now-playing"><span id="currentSongName">No song playing</span></div>
   <div class="control-buttons">
     <button id="shuffleBtn" class="control-btn" title="Shuffle"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg></button>
@@ -171,9 +187,7 @@
 </div>
 
 <script>
-  // ============================================
-  // OPTIMIZED SAKURA PETALS (reduced lag)
-  // ============================================
+  // === SAKURA PETALS ===
   class SakuraPetal {
     constructor(container) {
       this.container = container;
@@ -204,28 +218,19 @@
       this.y += this.vy;
       this.rotation += this.spin;
       this.el.style.transform = `translate(${this.x}px, ${this.y}px) rotate(${this.rotation}deg)`;
-      if (this.y > window.innerHeight + 50) {
-        this.el.remove();
-        return false;
-      }
+      if (this.y > window.innerHeight + 50) { this.el.remove(); return false; }
       return true;
     }
     createLeafSVG() {
       const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svg.setAttribute('viewBox', '0 0 100 100');
-      const colors = ['#d97b8b', '#c4576b', '#b84d63', '#a63d55', '#e07a8f'];
+      const colors = ['#d97b8b', '#c4576b', '#b84d63', '#a63d55', '#e07a8f', '#8fbc8f', '#6b8e6b', '#a3c9a3', '#7d9e7d', '#5c8a5c', '#c3a5d4', '#b38fcc', '#9b7bb5', '#aa8cce', '#d1bdf0'];
       const color = colors[Math.floor(Math.random() * colors.length)];
       const leaf = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       leaf.setAttribute('d', 'M50 10 C80 20, 85 60, 50 90 C15 60, 20 20, 50 10 Z');
       leaf.setAttribute('fill', color);
       leaf.setAttribute('opacity', '0.45');
-      const vein = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      vein.setAttribute('d', 'M50 15 C52 40, 48 65, 50 85');
-      vein.setAttribute('stroke', 'rgba(255,255,255,0.3)');
-      vein.setAttribute('stroke-width', '1');
-      vein.setAttribute('fill', 'none');
       svg.appendChild(leaf);
-      svg.appendChild(vein);
       return svg;
     }
     createHeartSVG() {
@@ -241,96 +246,89 @@
       return svg;
     }
   }
-
   const petals = [];
   let petalInterval = null, animFrame = null, isTabActive = true;
-  const container = document.getElementById('sakuraContainer');
-  function startPetalCreation() {
-    if (petalInterval) return;
-    petalInterval = setInterval(() => {
-      if (!isTabActive) return;
-      if (container && petals.length < 45) petals.push(new SakuraPetal(container));
-    }, 1000);
-  }
+  const containerEl = document.getElementById('sakuraContainer');
+  function startPetalCreation() { if (petalInterval) return; petalInterval = setInterval(() => { if (isTabActive && containerEl && petals.length < 45) petals.push(new SakuraPetal(containerEl)); }, 1000); }
   function stopPetalCreation() { if (petalInterval) { clearInterval(petalInterval); petalInterval = null; } }
-  function animatePetals(time) {
-    if (!isTabActive) { animFrame = requestAnimationFrame(animatePetals); return; }
-    for (let i=petals.length-1; i>=0; i--) if (!petals[i].update(time)) petals.splice(i,1);
-    animFrame = requestAnimationFrame(animatePetals);
-  }
-  function initPetals() { if (!container) return; stopPetalCreation(); isTabActive=true; startPetalCreation(); if (animFrame) cancelAnimationFrame(animFrame); animFrame = requestAnimationFrame(animatePetals); }
-  function pausePetals() { isTabActive=false; stopPetalCreation(); }
-  function resumePetals() { isTabActive=true; startPetalCreation(); }
-  document.addEventListener('visibilitychange', () => { document.hidden ? pausePetals() : resumePetals(); });
+  function animatePetals(time) { for (let i=petals.length-1; i>=0; i--) if (!petals[i].update(time)) petals.splice(i,1); animFrame = requestAnimationFrame(animatePetals); }
+  function initPetals() { stopPetalCreation(); startPetalCreation(); if (animFrame) cancelAnimationFrame(animFrame); animFrame = requestAnimationFrame(animatePetals); }
+  document.addEventListener('visibilitychange', () => { document.hidden ? (stopPetalCreation(), isTabActive=false) : (isTabActive=true, startPetalCreation()); });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initPetals); else initPetals();
 
-  // ============================================
-  // CAROUSEL (unchanged)
-  // ============================================
+  // === CAROUSEL (touch swipe + portrait detection) ===
   const slides = document.querySelectorAll('.carousel-slide');
   const dotsContainer = document.getElementById('carouselDots');
   let current = 0, timer;
-  if (slides.length > 0 && dotsContainer) {
-    slides.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.classList.add('carousel-dot');
-      if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => { goTo(i); resetAuto(); });
-      dotsContainer.appendChild(dot);
+  if (slides.length && dotsContainer) {
+    slides.forEach((_, i) => { 
+      const dot = document.createElement('button'); 
+      dot.classList.add('carousel-dot'); 
+      if (i===0) dot.classList.add('active'); 
+      dot.addEventListener('click', () => { goTo(i); resetAuto(); }); 
+      dotsContainer.appendChild(dot); 
     });
   }
   const dots = document.querySelectorAll('.carousel-dot');
-  function goTo(index) { const nextIndex = (index + slides.length) % slides.length; slides.forEach(s => s.classList.remove('active')); dots.forEach(d => d.classList.remove('active')); slides[nextIndex].classList.add('active'); dots[nextIndex].classList.add('active'); current = nextIndex; }
-  window.addEventListener('load', () => { slides.forEach((slide) => { const img = slide.querySelector('img'); function setupImage() { if (img && img.naturalHeight > img.naturalWidth) slide.classList.add('portrait'); if (img) img.style.objectPosition = img.dataset.focus || 'center'; } if (img && img.complete) setupImage(); else if (img) img.addEventListener('load', setupImage); }); });
-  function startAuto() { if (slides.length > 0) timer = setInterval(() => goTo(current+1), 8000); }
+  function goTo(index) { 
+    const nextIndex = (index + slides.length) % slides.length; 
+    slides.forEach(s => s.classList.remove('active')); 
+    dots.forEach(d => d.classList.remove('active')); 
+    slides[nextIndex].classList.add('active'); 
+    dots[nextIndex].classList.add('active'); 
+    current = nextIndex; 
+  }
+  function startAuto() { timer = setInterval(() => goTo(current+1), 8000); }
   function resetAuto() { clearInterval(timer); startAuto(); }
   startAuto();
-  let startX = 0;
+
+  // Touch swipe
   const carousel = document.querySelector('.carousel');
+  let startX = 0;
   if (carousel) {
-    carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-    carousel.addEventListener('touchend', e => { const diff = startX - e.changedTouches[0].clientX; if (Math.abs(diff) > 40) { goTo(diff > 0 ? current+1 : current-1); resetAuto(); } });
+    carousel.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', (e) => { 
+      const diff = startX - e.changedTouches[0].clientX; 
+      if (Math.abs(diff) > 40) { 
+        goTo(diff > 0 ? current + 1 : current - 1); 
+        resetAuto(); 
+      } 
+    });
   }
 
-  // ============================================
-  // SCROLL SPY (throttled for performance)
-  // ============================================
+  // Portrait detection
+  window.addEventListener('load', () => {
+    slides.forEach((slide) => {
+      const img = slide.querySelector('img');
+      function setupImage() {
+        if (img && img.naturalHeight > img.naturalWidth) slide.classList.add('portrait');
+        if (img && img.dataset.focus) img.style.objectPosition = img.dataset.focus;
+      }
+      if (img && img.complete) setupImage();
+      else if (img) img.addEventListener('load', setupImage);
+    });
+  });
+
+  // === SCROLL SPY ===
   let ticking = false;
   function updateActiveNav() {
     const sections = ['story', 'schedule', 'dresscode', 'rsvp'];
     const scrollPos = window.scrollY + 150;
     let currentSection = '';
-    for (let section of sections) {
-      const el = document.getElementById(section);
-      if (el) {
-        const offsetTop = el.offsetTop;
-        const offsetBottom = offsetTop + el.offsetHeight;
-        if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
-          currentSection = section;
-          break;
-        }
-      }
+    for (let s of sections) {
+      const el = document.getElementById(s);
+      if (el && scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) { currentSection = s; break; }
     }
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href').substring(1);
-      if (href === currentSection) link.classList.add('active');
-      else link.classList.remove('active');
+    document.querySelectorAll('nav a').forEach(link => { 
+      const href = link.getAttribute('href').substring(1); 
+      link.classList.toggle('active', href === currentSection); 
     });
     ticking = false;
   }
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(updateActiveNav);
-      ticking = true;
-    }
-  });
-  window.addEventListener('resize', updateActiveNav);
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateActiveNav); ticking = true; } });
   updateActiveNav();
 
-  // ============================================
-  // MUSIC PLAYER (robust, loop enabled)
-  // ============================================
+  // === MUSIC PLAYER (working shuffle/loop active states) ===
   const musicFiles = [
     'music/leehi - only.mp3',
     'music/mashup lễ Đường x một dời mobuds ft wenne.mp3',
@@ -341,21 +339,18 @@
     'music/westlife - beautiful in white.mp3',
     'music/westlife - nothing\'s gonna change my love for you.mp3',
   ];
-
   let audio = document.getElementById('bgMusic');
   let playlist = [...musicFiles];
   let currentIndex = 0;
   let isShuffled = false;
-  let isLooping = true;
+  let isLooping = false;
   let isPlaying = false;
   let isLoading = false;
   let pendingIndex = null;
   let loadTimeout = null;
-  let previousVolume = 0.3;
 
   function getSongName(path) {
-    let filename = path.split('/').pop().replace('.mp3', '');
-    return filename.replace(/-/g, ' ').replace(/_/g, ' ');
+    return path.split('/').pop().replace('.mp3', '').replace(/-/g, ' ').replace(/_/g, ' ');
   }
   function updateNowPlaying() {
     const span = document.getElementById('currentSongName');
@@ -364,7 +359,8 @@
   function updatePlayPauseUI() {
     const btn = document.getElementById('playPauseBtn');
     if (!btn) return;
-    const iconPlay = btn.querySelector('.icon-play'), iconPause = btn.querySelector('.icon-pause');
+    const iconPlay = btn.querySelector('.icon-play');
+    const iconPause = btn.querySelector('.icon-pause');
     if (isPlaying) {
       btn.classList.add('playing');
       if (iconPlay) iconPlay.style.display = 'none';
@@ -376,15 +372,20 @@
     }
   }
   function updateShuffleLoopUI() {
-    const shuffleBtn = document.getElementById('shuffleBtn'), loopBtn = document.getElementById('loopBtn');
-    if (shuffleBtn) shuffleBtn.classList.toggle('active', isShuffled);
-    if (loopBtn) loopBtn.classList.toggle('active', isLooping);
+    const shuffleBtn = document.getElementById('shuffleBtn');
+    const loopBtn = document.getElementById('loopBtn');
+    if (shuffleBtn) {
+      if (isShuffled) shuffleBtn.classList.add('active');
+      else shuffleBtn.classList.remove('active');
+    }
+    if (loopBtn) {
+      if (isLooping) loopBtn.classList.add('active');
+      else loopBtn.classList.remove('active');
+    }
   }
-
   async function _loadAndPlay(index, autoPlay = true) {
     if (loadTimeout) clearTimeout(loadTimeout);
     isLoading = true;
-    const wasPlaying = isPlaying;
     if (!audio.paused) audio.pause();
     currentIndex = (index + playlist.length) % playlist.length;
     audio.src = playlist[currentIndex];
@@ -407,7 +408,11 @@
     } catch (err) {
       console.warn('Audio load error:', err);
       isLoading = false;
-      if (pendingIndex !== null) { const next = pendingIndex; pendingIndex = null; _loadAndPlay(next, autoPlay); }
+      if (pendingIndex !== null) {
+        const next = pendingIndex;
+        pendingIndex = null;
+        _loadAndPlay(next, autoPlay);
+      }
       return;
     }
     if (pendingIndex !== null) {
@@ -417,22 +422,38 @@
       _loadAndPlay(next, autoPlay);
       return;
     }
-    if (autoPlay || wasPlaying) {
-      try { await audio.play(); isPlaying = true; } catch(e) { isPlaying = false; }
-    } else { isPlaying = false; }
+    if (autoPlay || isPlaying) {
+      try {
+        await audio.play();
+        isPlaying = true;
+      } catch (e) {
+        isPlaying = false;
+      }
+    } else {
+      isPlaying = false;
+    }
     isLoading = false;
     updatePlayPauseUI();
   }
-
   function loadAndPlay(index, autoPlay = true) {
-    if (isLoading) { pendingIndex = index; return; }
+    if (isLoading) {
+      pendingIndex = index;
+      return;
+    }
     _loadAndPlay(index, autoPlay);
   }
-
   function playPause() {
     if (isLoading) return;
-    if (isPlaying) { audio.pause(); isPlaying = false; updatePlayPauseUI(); }
-    else { audio.play().then(() => { isPlaying = true; updatePlayPauseUI(); }).catch(e => console.warn(e)); }
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      updatePlayPauseUI();
+    } else {
+      audio.play().then(() => {
+        isPlaying = true;
+        updatePlayPauseUI();
+      }).catch(e => console.warn(e));
+    }
   }
   function nextTrack() {
     if (isLoading) {
@@ -466,7 +487,10 @@
     } else {
       const currentSong = playlist[currentIndex];
       let shuffled = [...musicFiles];
-      for (let i = shuffled.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; }
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
       const idx = shuffled.findIndex(s => s === currentSong);
       if (idx !== -1) [shuffled[currentIndex], shuffled[idx]] = [shuffled[idx], shuffled[currentIndex]];
       else shuffled[currentIndex] = currentSong;
@@ -476,63 +500,111 @@
     updateNowPlaying();
     updateShuffleLoopUI();
   }
-  function toggleLoop() { isLooping = !isLooping; updateShuffleLoopUI(); }
+  function toggleLoop() {
+    isLooping = !isLooping;
+    updateShuffleLoopUI();
+  }
 
   document.addEventListener('DOMContentLoaded', () => {
     audio.volume = 0.3;
     loadAndPlay(0, false);
+
     document.getElementById('playPauseBtn')?.addEventListener('click', playPause);
     document.getElementById('nextBtn')?.addEventListener('click', nextTrack);
     document.getElementById('prevBtn')?.addEventListener('click', prevTrack);
     document.getElementById('shuffleBtn')?.addEventListener('click', toggleShuffle);
     document.getElementById('loopBtn')?.addEventListener('click', toggleLoop);
+
     const progressSlider = document.getElementById('progressSlider');
     const currentTimeEl = document.getElementById('currentTime');
     const durationEl = document.getElementById('duration');
-    function formatTime(sec) { if (isNaN(sec)||!isFinite(sec)) return '0:00'; const m=Math.floor(sec/60), s=Math.floor(sec%60); return `${m}:${s<10?'0':''}${s}`; }
+
+    function formatTime(sec) {
+      if (isNaN(sec) || !isFinite(sec)) return '0:00';
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
     audio.addEventListener('loadedmetadata', () => {
       if (durationEl) durationEl.textContent = formatTime(audio.duration);
-      if (progressSlider) { progressSlider.max = audio.duration; progressSlider.value = 0; progressSlider.style.setProperty('--progress', '0%'); }
+      if (progressSlider) {
+        progressSlider.max = audio.duration;
+        progressSlider.value = 0;
+      }
     });
+
     audio.addEventListener('timeupdate', () => {
-      if (progressSlider && !progressSlider.matches(':active')) { progressSlider.value = audio.currentTime; const percent = (audio.currentTime/audio.duration)*100; progressSlider.style.setProperty('--progress', percent+'%'); }
+      if (progressSlider && !progressSlider.matches(':active')) {
+        progressSlider.value = audio.currentTime;
+      }
       if (currentTimeEl) currentTimeEl.textContent = formatTime(audio.currentTime);
     });
-    if (progressSlider) progressSlider.addEventListener('input', function() { audio.currentTime = this.value; const percent = (this.value/this.max)*100; this.style.setProperty('--progress', percent+'%'); });
-    audio.addEventListener('ended', () => { if (isLooping) nextTrack(); else { isPlaying = false; updatePlayPauseUI(); } });
-    const volumeSlider = document.getElementById('volumeSlider'), volumeIcon = document.getElementById('volumeIcon');
-    if (volumeSlider) {
-      volumeSlider.value = 30; audio.volume = 0.3; volumeSlider.style.setProperty('--volumelevel', '30%');
-      const setVolumeIcon = (vol) => {
-        const svg = volumeIcon?.querySelector('svg');
-        if (!svg) return;
-        if (vol===0) svg.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
-        else if (vol<0.5) svg.innerHTML = '<path d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L7 9H5z"/>';
-        else svg.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
-      };
-      volumeSlider.addEventListener('input', () => { const vol = volumeSlider.value/100; audio.volume = vol; volumeSlider.style.setProperty('--volumelevel', volumeSlider.value+'%'); setVolumeIcon(vol); });
-      if (volumeIcon) volumeIcon.addEventListener('click', () => {
-        if (audio.volume > 0) { previousVolume = audio.volume; audio.volume = 0; volumeSlider.value = 0; volumeSlider.style.setProperty('--volumelevel', '0%'); }
-        else { audio.volume = previousVolume; volumeSlider.value = previousVolume*100; volumeSlider.style.setProperty('--volumelevel', (previousVolume*100)+'%'); }
-        setVolumeIcon(audio.volume);
+
+    if (progressSlider) {
+      progressSlider.addEventListener('input', function () {
+        audio.currentTime = this.value;
       });
     }
+
+    audio.addEventListener('ended', () => {
+      if (isLooping) nextTrack();
+      else {
+        isPlaying = false;
+        updatePlayPauseUI();
+      }
+    });
+
+    const volumeSlider = document.getElementById('volumeSlider');
+    const volumeIcon = document.getElementById('volumeIcon');
+    if (volumeSlider) {
+      volumeSlider.value = 30;
+      audio.volume = 0.3;
+      volumeSlider.addEventListener('input', () => {
+        audio.volume = volumeSlider.value / 100;
+      });
+      if (volumeIcon) {
+        volumeIcon.addEventListener('click', () => {
+          if (audio.volume > 0) {
+            audio.volume = 0;
+            volumeSlider.value = 0;
+          } else {
+            audio.volume = 0.3;
+            volumeSlider.value = 30;
+          }
+        });
+      }
+    }
+
     updateShuffleLoopUI();
     updateNowPlaying();
   });
 
-  const musicControlsDiv = document.getElementById('musicControls');
+  // Music player visibility & minimize
+  const musicDiv = document.getElementById('musicControls');
   const minimizeBtn = document.getElementById('minimizeBtn');
-  if (minimizeBtn && musicControlsDiv) minimizeBtn.addEventListener('click', () => { musicControlsDiv.classList.toggle('minimized'); minimizeBtn.textContent = musicControlsDiv.classList.contains('minimized') ? '+' : '−'; });
-  function checkBottom() { const scrollTop = window.pageYOffset||document.documentElement.scrollTop, windowHeight=window.innerHeight, docHeight=document.documentElement.scrollHeight, atBottom = scrollTop+windowHeight >= docHeight-10; if (atBottom) musicControlsDiv.classList.add('hide-at-bottom'); else musicControlsDiv.classList.remove('hide-at-bottom'); }
-  window.addEventListener('scroll', checkBottom); window.addEventListener('resize', checkBottom); checkBottom();
-  document.addEventListener('DOMContentLoaded', () => {
-    const hero = document.getElementById('hero');
-    if (hero && musicControlsDiv) { const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { entry.isIntersecting ? musicControlsDiv.classList.remove('visible') : musicControlsDiv.classList.add('visible'); }); }, { threshold: 0.3 }); observer.observe(hero); }
-    const familySides = document.querySelectorAll('.family-side');
-    const familyObserver = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.2 });
-    familySides.forEach(side => familyObserver.observe(side));
-  });
+  if (minimizeBtn && musicDiv) {
+    minimizeBtn.addEventListener('click', () => {
+      musicDiv.classList.toggle('minimized');
+      minimizeBtn.textContent = musicDiv.classList.contains('minimized') ? '+' : '−';
+    });
+  }
+  function checkBottom() {
+    const atBottom = (window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight - 10;
+    if (musicDiv) musicDiv.classList.toggle('hide-at-bottom', atBottom);
+  }
+  window.addEventListener('scroll', checkBottom);
+  window.addEventListener('resize', checkBottom);
+  checkBottom();
+
+  // Show music player after hero is scrolled past
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (musicDiv) {
+        e.isIntersecting ? musicDiv.classList.remove('visible') : musicDiv.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.3 }).observe(document.getElementById('hero'));
 </script>
 </body>
 </html>
