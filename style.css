@@ -162,35 +162,37 @@ nav a:hover::after{
 
 /* ========== HERO SECTION ========== */
 #hero {
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:8rem 2rem 6rem;
-    position:relative;
-    overflow:hidden;
-    background-image: url("images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 6rem;
+  position: relative;
+  overflow: hidden;
+  /* Fallback color in case image fails to load */
+  background-color: var(--petal-mid);
+  background-image: url("images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
 }
 
-#hero::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, 
-    rgba(254,245,240,0.55) 0%,
-    rgba(245,230,225,0.6) 100%);
-  pointer-events:none;
-  z-index:1;
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    rgba(254, 245, 240, 0.55) 0%,
+    rgba(245, 230, 225, 0.6) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-#hero::after{
+/* #hero::after{
   content:'';
   position:absolute;
   inset:0;
@@ -199,7 +201,7 @@ nav a:hover::after{
     radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,165,116,0.05) 0%, transparent 65%);
   pointer-events:none;
   z-index:2;
-}
+} */
 
 .hero-eyebrow{
   font-size:1.2rem;
@@ -841,6 +843,20 @@ section{padding:7rem 2rem;position:relative;z-index:2}
   .rings-icon-vertical {
     width: 3rem;   /* slightly smaller on mobile, but still proportional */
   }
+  #hero {
+    background-attachment: scroll !important;
+    background-position: center !important;
+    background-size: 169% !important;
+    background-repeat: no-repeat;
+    background-color: var(--petal-mid); /* matches your palette */
+  }
+
+  #hero::before {
+    /* Lighter overlay so the image is more visible */
+    background: linear-gradient(180deg, 
+      rgba(254, 245, 240, 0.4) 0%,
+      rgba(245, 230, 225, 0.5) 100%);
+  }
 }
 
 /* ========== SCHEDULE ========== */
@@ -1200,35 +1216,40 @@ footer::before{
 }
 
 /* ========== MUSIC CONTROLS PANEL ========== */
-.music-controls{
-    position:fixed;
-    bottom:1rem;
-    right:1ch;
-    left:auto;
-    transform: translateY(120%);
-    opacity: 0;
-    transition: all 0.4s ease;
-    pointer-events: none;
-
-    background:rgba(255,255,255,0.95);
-    backdrop-filter:blur(20px);
-    border-radius:20px;
-    padding:1rem 1.5rem;
-    box-shadow:
-        0 8px 32px rgba(45,31,31,0.15),
-        0 2px 8px rgba(196,87,107,0.1);
-
-    z-index:99;
-    display:flex;
-    flex-direction:column;
-    gap:0.5rem;
-    min-width:280px;
+.music-controls {
+  position: fixed;
+  bottom: 1rem;
+  left: auto;
+  right: 1ch;
+  width: 320px;
+  max-width: calc(100vw - 2rem);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(45, 31, 31, 0.15);
+  z-index: 99;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .music-controls.visible {
   transform: translateY(0);
-  opacity: 0.9;
+  opacity: 0.95;
   pointer-events: auto;
+}
+
+/* Centered on mobile */
+@media (max-width: 768px) {
+  .music-controls {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 320px;
+  }
 }
 
 @media(max-width:480px){
@@ -1414,6 +1435,17 @@ footer::before{
   justify-content:center;
 }
 
+.control-btn.active {
+  color: var(--rose-deep);
+  background: rgba(196, 87, 107, 0.15);
+  transform: scale(1.05);
+}
+
+/* If you want the SVG inside to also change color */
+.control-btn.active svg {
+  fill: var(--rose-deep);
+}
+
 .control-btn:hover{
   background:rgba(196,87,107,0.1);
   color:var(--rose-deep);
@@ -1452,12 +1484,12 @@ footer {
   margin-bottom: 0;
 }
 
-/* Music player – fixed width & responsive */
+/* Music player – fixed width & responsive
 .music-controls {
   width: 320px;
   max-width: 90vw;
   transition: all 0.3s ease;
-}
+} */
 
 /* Now playing ellipsis */
 .now-playing {
@@ -1488,13 +1520,11 @@ footer {
   border-radius: 50%;
   color: #b86a7a;
   font-size: 20px;
-  font-weight: bold;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   z-index: 10;
-  transition: all 0.2s ease;
 }
 .minimize-btn:hover {
   background: rgba(184, 106, 122, 0.3);
